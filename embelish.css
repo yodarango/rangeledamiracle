@@ -10,6 +10,7 @@
 --sage-green: #9DA58F;
 --main-font: 'Julius Sans One', sans-serif;
 --dark-gray: rgb(32, 32, 32);
+--image-size: 100vw;
 }
 body::-webkit-scrollbar
 {
@@ -41,11 +42,7 @@ color: white;
 .slideshow {
     list-style-type: none;
   }
-  .slideshow ul 
-  {
-      top: 0;
-  }
-  section p 
+  .wrapper p 
   {
     font-family: 'Euphoria Script', cursive;
       font-weight: 1000;
@@ -61,11 +58,12 @@ background-image: white;
 -webkit-background-clip: text;
 -webkit-text-fill-color: white;
 position:relative;
-font-size:1em;
+font-size: 1em;
 font-family: var(--main-font);
 font-weight:900;
 text-align: center;
 top: 30em;
+z-index: 10;
 }
   /** SLIDESHOW **/
   .slideshow
@@ -143,6 +141,95 @@ top: 30em;
       25% { opacity: 0 }
       100% { opacity: 0 }
   }
+h1
+{
+color: var(--sage-green);
+font-family: 'Palanquin', sans-serif;
+width: 80%;
+margin: auto;
+text-align: center;
+margin-top: 2rem;
+font-size: 2rem;
+}
+hr 
+{
+border-bottom: .8px solid var(--sage-green);
+width: 64%;
+position: relative;
+left: 18%;
+top:-.5rem;
+}
+.menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.menu li
+{
+    display: inline-block;
+    padding: 2% 5%;
+}
+.menu a
+{
+    font-family: tekton-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;  
+    color: var(--dark-gray);  
+}
+section img
+{
+width: calc(var(--image-size) * .5);
+height: calc(var(--image-size) * .5);
+border-radius: 50%;
+margin: auto;
+display: block;
+object-fit: cover;
+}
+.ceremony-wrapper, .reception-wrapper
+{
+    margin-top: calc(var(--image-size) * .10);
+    padding-top: calc(var(--image-size) * .07);
+}
+.reception-wrapper
+{
+    background-color: #FAF7F9;
+}
+.ceremony-wrapper div, .reception-wrapper div
+{
+    width: calc(var(--image-size) * .5);
+    margin: auto;
+    text-align: center;
+    padding-bottom: calc(var(--image-size) * .10);
+    padding-top:calc(var(--image-size) * .035);
+}
+.ceremony-wrapper hr, .reception-wrapper hr
+{
+    border-bottom: .8px solid var(--dark-gray);
+    width: 100%;
+    position: relative;
+    margin: auto;
+    display: block;
+}
+.ceremony-wrapper span, .reception-wrapper span
+{
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+.ceremony-wrapper h2, .reception-wrapper h2
+{
+color: var(--dark-gray);
+font-family: 'Palanquin', sans-serif;
+font-size: 1.5rem;
+}
+.ceremony-wrapper p, .reception-wrapper p
+{
+    font-size: 1rem;
+    position: relative;
+    font-family: tekton-pro, sans-serif;
+}
   footer
 {
 height: 6em;
