@@ -23,7 +23,7 @@ height: 100vh;
 header
 {
 width: 100%;
-height: 6em;
+height: 6rem;
 background-color: var(--sage-green);
 position: fixed;
 display: flex;
@@ -35,7 +35,7 @@ margin: auto;
 font-family: p22-zaner-pro-three, sans-serif;
 font-weight: 1000;
 font-style: normal;
-font-size: 3.8em;
+font-size: 3.8rem;
 color: white;
 }
 /**Starts the Slide Show**/
@@ -148,8 +148,8 @@ font-family: 'Palanquin', sans-serif;
 width: 80%;
 margin: auto;
 text-align: center;
-margin-top: 2rem;
-font-size: 2rem;
+margin-top: calc(var(--image-size) * .08);
+font-size: calc(var(--image-size) * .08);
 }
 hr 
 {
@@ -157,7 +157,7 @@ border-bottom: .8px solid var(--sage-green);
 width: 64%;
 position: relative;
 left: 18%;
-top:-.5rem;
+top: calc(var(--image-size) * -0.02);
 }
 .menu
 {
@@ -178,8 +178,9 @@ top:-.5rem;
     font-weight: 300;
     font-style: normal;  
     color: var(--dark-gray);  
+    font-size: 1rem;
 }
-section img
+.ceremony-wrapper img, .reception-wrapper img
 {
 width: calc(var(--image-size) * .5);
 height: calc(var(--image-size) * .5);
@@ -208,10 +209,9 @@ object-fit: cover;
 .ceremony-wrapper hr, .reception-wrapper hr
 {
     border-bottom: .8px solid var(--dark-gray);
-    width: 100%;
+    width: calc(var(--image-size) * .75);
     position: relative;
-    margin: auto;
-    display: block;
+    left: calc(var(--image-size) * -.125);
 }
 .ceremony-wrapper span, .reception-wrapper span
 {
@@ -229,6 +229,15 @@ font-size: 1.5rem;
     font-size: 1rem;
     position: relative;
     font-family: tekton-pro, sans-serif;
+}
+.get-directions
+{
+    margin: auto;
+    width: 50%;
+    top: 1rem;
+    position: relative;
+    border: .8px solid var(--dark-gray);
+    border-radius: 5px;
 }
   footer
 {
