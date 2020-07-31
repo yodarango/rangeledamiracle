@@ -12,6 +12,10 @@
 --dark-gray: rgb(32, 32, 32);
 --image-size: 100vw;
 }
+body
+{
+    background-color: #f2f2f2;
+}
 body::-webkit-scrollbar
 {
     display: none;
@@ -26,17 +30,20 @@ width: 100%;
 height: 6rem;
 background-color: var(--sage-green);
 position: fixed;
-display: flex;
 z-index: 50;
 }
 header h2
 {
-margin: auto;
+position: relative;
 font-family: p22-zaner-pro-three, sans-serif;
 font-weight: 1000;
 font-style: normal;
 font-size: 3.8rem;
 color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 6rem;
 }
 /**Starts the Slide Show**/
 .slideshow {
@@ -196,7 +203,7 @@ object-fit: cover;
 }
 .reception-wrapper
 {
-    background-color: #FAF7F9;
+    background-color: #fcedf6;
 }
 .ceremony-wrapper div, .reception-wrapper div
 {
@@ -206,12 +213,17 @@ object-fit: cover;
     padding-bottom: calc(var(--image-size) * .10);
     padding-top:calc(var(--image-size) * .035);
 }
+.reception-wrapper div
+{
+    padding-bottom: calc(var(--image-size) * .25);  
+}
 .ceremony-wrapper hr, .reception-wrapper hr
 {
     border-bottom: .8px solid var(--dark-gray);
     width: calc(var(--image-size) * .75);
     position: relative;
     left: calc(var(--image-size) * -.125);
+    top: calc(var(--image-size) * -.0055);
 }
 .ceremony-wrapper span, .reception-wrapper span
 {
@@ -222,22 +234,41 @@ object-fit: cover;
 {
 color: var(--dark-gray);
 font-family: 'Palanquin', sans-serif;
-font-size: 1.5rem;
+font-size: calc(var(--image-size) * .073);
 }
 .ceremony-wrapper p, .reception-wrapper p
 {
     font-size: 1rem;
     position: relative;
     font-family: tekton-pro, sans-serif;
+    font-size: calc(var(--image-size) * .045);
 }
 .get-directions
 {
     margin: auto;
     width: 50%;
-    top: 1rem;
+    top: calc(var(--image-size) * .0355);
     position: relative;
     border: .8px solid var(--dark-gray);
-    border-radius: 5px;
+    border-radius: calc(var(--image-size) * .04);
+    font-size: calc(var(--image-size) * .04);
+    padding: .3em;
+    background-color: #f2f2f2;
+    z-index: 2;
+}
+.reception-wrapper .get-directions
+{
+    background-color: #fcedf6;
+}
+#flowers
+{
+    width: calc(var(--image-size) * .6);
+    height: calc(var(--image-size) * .35);
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    top: calc(var(--image-size) * -.12);
 }
   footer
 {
