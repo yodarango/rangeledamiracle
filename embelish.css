@@ -228,7 +228,7 @@ object-fit: cover;
 .ceremony-wrapper span, .reception-wrapper span
 {
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: calc(var(--image-size) * .048);
 }
 .ceremony-wrapper h2, .reception-wrapper h2
 {
@@ -238,7 +238,6 @@ font-size: calc(var(--image-size) * .073);
 }
 .ceremony-wrapper p, .reception-wrapper p
 {
-    font-size: 1rem;
     position: relative;
     font-family: tekton-pro, sans-serif;
     font-size: calc(var(--image-size) * .045);
@@ -260,6 +259,17 @@ font-size: calc(var(--image-size) * .073);
 {
     background-color: #fcedf6;
 }
+.about
+{
+    position: relative;
+    font-family: tekton-pro, sans-serif;
+    font-size: calc(var(--image-size) * .04);
+    color: var(--dark-gray);
+    line-height: 150%;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+}
 #flowers
 {
     width: calc(var(--image-size) * .6);
@@ -269,6 +279,69 @@ font-size: calc(var(--image-size) * .073);
     object-fit: cover;
     position: relative;
     top: calc(var(--image-size) * -.12);
+}
+.links-table
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    grid-gap: 6%;
+    width: 75%;
+    height: calc(var(--image-size) * .75);
+    margin: auto;
+    padding-bottom: calc(var(--image-size) * .2);
+}
+.links-table > div
+{
+    background: white;
+    box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, .2);
+    position: relative;
+    border-bottom-left-radius: 27% 28%;
+}
+.links-table > div:after
+{
+content: "";
+background: linear-gradient(45deg, rgb(187, 187, 187), rgb(239, 239, 240));
+width: 20%;
+height: 15%;
+margin: 0;
+padding: 0;
+display: block;
+z-index: 15;
+position: absolute;
+bottom: 3%;
+left: 1.2%;
+transform: skewY(15deg);
+border-bottom-left-radius: 80% 81%;
+}
+.sticky div:nth-child(1)
+{
+    border-bottom: 1px solid rgb(152, 215, 245);
+    overflow: hidden;
+    position: relative;
+    top: 1.8rem
+}
+.sticky div:nth-child(2)
+{
+    border-bottom: 1px solid rgb(152, 215, 245);
+    overflow: hidden;
+    position: relative;
+    top: 3.6rem;
+}
+.sticky div:nth-child(3)
+{
+    border-bottom: 1px solid rgb(152, 215, 245);
+    overflow: hidden;
+    position: relative;
+    top: 5.4rem;
+}
+.sticky div:nth-child(4)
+{
+    border-bottom: 1px solid rgb(152, 215, 245);
+    overflow: hidden;
+    position: relative;
+    top: 7.2rem;
 }
   footer
 {
