@@ -280,6 +280,17 @@ font-size: calc(var(--image-size) * .073);
     position: relative;
     top: calc(var(--image-size) * -.12);
 }
+.additional-details h2
+{
+color: var(--dark-gray);
+font-family: 'Palanquin', sans-serif;
+font-size: calc(var(--image-size) * .073);
+margin: auto;
+width: 100%;
+text-align: center;
+position: relative;
+top: -3.5rem;
+}
 .links-table
 {
     display: grid;
@@ -291,6 +302,8 @@ font-size: calc(var(--image-size) * .073);
     height: calc(var(--image-size) * .75);
     margin: auto;
     padding-bottom: calc(var(--image-size) * .2);
+    position: relative;
+    top: -2rem;
 }
 .links-table > div
 {
@@ -312,36 +325,49 @@ z-index: 15;
 position: absolute;
 bottom: 3%;
 left: 1.2%;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
 transform: skewY(15deg);
 border-bottom-left-radius: 80% 81%;
+}
+.last-child a 
+{
+    position: absolute;
+    z-index: 20;
+    color: var(--dark-gray);
+    font-family: var(--main-font);
+    font-size: calc(var(--image-size) * .03);
+    width: 100%;
+    display: block;
+    text-align: center;
+    top: calc(var(--image-size) * -.2);
+    line-height: calc(var(--image-size) * .08);
 }
 .sticky div:nth-child(1)
 {
     border-bottom: 1px solid rgb(152, 215, 245);
     overflow: hidden;
     position: relative;
-    top: 1.8rem
+    top: 20%;
 }
 .sticky div:nth-child(2)
 {
     border-bottom: 1px solid rgb(152, 215, 245);
     overflow: hidden;
     position: relative;
-    top: 3.6rem;
+    top: 40%;
 }
 .sticky div:nth-child(3)
 {
     border-bottom: 1px solid rgb(152, 215, 245);
     overflow: hidden;
     position: relative;
-    top: 5.4rem;
+    top: 60%;
 }
 .sticky div:nth-child(4)
 {
     border-bottom: 1px solid rgb(152, 215, 245);
-    overflow: hidden;
     position: relative;
-    top: 7.2rem;
+    top: 80%;
 }
   footer
 {
