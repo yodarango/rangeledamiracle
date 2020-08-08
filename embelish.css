@@ -166,6 +166,28 @@ position: relative;
 left: 18%;
 top: calc(var(--image-size) * -0.02);
 }
+/*side sitcky with dark mode and spanish 
+didnt really like it
+#settings
+{
+width: 3em;
+height: 6em;
+background-color: rgba(163, 163, 163, 0.1);
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1.5fr 2fr;
+position: sticky;
+z-index: 20;
+top: 50%;
+left: 100%;
+border-top-left-radius: 1rem;
+border-bottom-left-radius: 1rem;
+row-gap: 1px;
+}
+#settings >div:nth-child(1)
+{
+border-bottom: 1px solid black;
+}*/
 .menu
 {
     display: flex;
@@ -185,8 +207,9 @@ top: calc(var(--image-size) * -0.02);
     font-weight: 300;
     font-style: normal;  
     color: var(--dark-gray);  
-    font-size: 1rem;
+    font-size: 1em;
 }
+
 .ceremony-wrapper img, .reception-wrapper img
 {
 width: calc(var(--image-size) * .5);
@@ -223,7 +246,7 @@ object-fit: cover;
     width: calc(var(--image-size) * .75);
     position: relative;
     left: calc(var(--image-size) * -.125);
-    top: calc(var(--image-size) * -.0055);
+    top: calc(var(--image-size) * .006);
 }
 .ceremony-wrapper span, .reception-wrapper span
 {
@@ -236,7 +259,7 @@ color: var(--dark-gray);
 font-family: 'Palanquin', sans-serif;
 font-size: calc(var(--image-size) * .073);
 }
-.ceremony-wrapper p, .reception-wrapper p
+.ceremony-wrapper p, a, .reception-wrapper p, a
 {
     position: relative;
     font-family: tekton-pro, sans-serif;
@@ -258,6 +281,19 @@ font-size: calc(var(--image-size) * .073);
 .reception-wrapper .get-directions
 {
     background-color: #fcedf6;
+    
+}
+.get-directions:visited
+{
+    color: var(--dark-gray);
+}
+.get-directions:hover
+{
+background-color: var(--dark-gray);
+color: #f2f2f2;
+cursor: pointer;
+transition-duration: 500ms;
+transition-timing-function: ease-in-out;
 }
 .about
 {
@@ -311,6 +347,7 @@ top: -3.5rem;
     box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, .2);
     position: relative;
     border-bottom-left-radius: 27% 28%;
+    overflow: hidden;
 }
 .links-table > div:after
 {
@@ -329,6 +366,20 @@ box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
 transform: skewY(15deg);
 border-bottom-left-radius: 80% 81%;
 }
+.links-table > div:hover:after
+{
+    transform:  scale(0.2) translate( -340%, 330%);
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+}
+.links-table > div:hover
+{
+    border-bottom-left-radius: 0;
+    background-color: rgb(255, 255, 199);
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+    
+}
 .last-child a 
 {
     position: absolute;
@@ -341,6 +392,10 @@ border-bottom-left-radius: 80% 81%;
     text-align: center;
     top: calc(var(--image-size) * -.2);
     line-height: calc(var(--image-size) * .08);
+}
+.last-child a:hover
+{
+text-decoration: underline;
 }
 .sticky div:nth-child(1)
 {
@@ -369,6 +424,28 @@ border-bottom-left-radius: 80% 81%;
     position: relative;
     top: 80%;
 }
+#rsvp
+{
+display: block;
+width: 20%;
+height: 1em;
+margin: auto;
+text-align: center;
+position: relative;
+bottom: calc(var(--image-size) * .15);
+font-family: var(--main-font);
+border: 1px solid pink;
+padding: .8em 1em;
+border-radius: 2em;
+}
+#rsvp:hover
+{
+    background-color: pink;
+    color: white;
+    transform: scale(.9);
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
   footer
 {
 height: 6em;
@@ -382,4 +459,127 @@ top: 1em;
 display: flex;
 align-items: center;
 justify-content: center;
+}
+@media only screen and (min-width: 750px)
+{
+   .menu a 
+   {
+     
+        font-size: 1.8em;
+    }
+    .ceremony-wrapper a, .reception-wrapper a
+    {
+        font-size: 30px;
+    }
+    footer
+    {
+    height: 120px;
+    font-size: 1.2em;
+    }
+    header
+{
+
+height: 120px;
+}
+header h2
+{
+font-size: 4.8rem;
+height: 7.2rem;
+}
+}
+@media only screen and (min-width: 999px)
+{
+
+.menu a {
+     
+    font-size: 30px;
+}
+h1
+{
+width: 700px;
+font-size: 70px;
+}
+hr 
+{
+border-bottom: 1px solid var(--sage-green);
+width: 520px;
+left: 27.4%;
+
+}
+.menu
+{
+width: 850px;
+}
+.ceremony-wrapper img, .reception-wrapper img
+{
+width: 700px;
+height: 700px;
+}
+.ceremony-wrapper div, .reception-wrapper div
+{
+    width: 700px;
+}
+.ceremony-wrapper hr, .reception-wrapper hr
+{
+    border-bottom: 1px solid var(--dark-gray);
+    width: calc(var(--image-size) * .7);
+    left: calc(var(--image-size) * -0.05);
+    top: calc(var(--image-size) * 0.018);
+}
+
+.ceremony-wrapper span, .reception-wrapper span
+{
+    font-size: 50px;
+}
+.ceremony-wrapper h2, .reception-wrapper h2
+{
+
+
+font-size: 80px
+}
+.ceremony-wrapper p, .reception-wrapper p
+{
+    font-size: 40px;
+}
+#flowers
+{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    top: calc(var(--image-size) * -.12);
+}
+.additional-details h2
+{
+font-size: 70px;
+}
+.links-table
+{
+    width: 700px;
+    height: 700px;
+}
+.last-child a 
+{
+    font-size: 30px;
+    top: -198px;
+}
+.last-child a:hover
+{
+text-decoration: underline;
+}
+#rsvp
+{
+font-size: 45px;
+width: 200px;
+height: 50px;
+border: 1px solid pink;
+padding: 25px 40px;
+}
+  footer
+{
+height: 150px;
+font-size: 1.5em;
+}
 }
