@@ -42,7 +42,7 @@ function language() {
       g.innerHTML = "RECEPTION";
       h.outerHTML =
         '<p id="address2"><span class="date">June 19th, 2021 Following Ceremony</span><br> 123 Some Street <br> Hot Springs, AK 37777</p>';
-      i.innerHTML = "Como Llegar";
+      i.innerHTML = "Get Directions";
       j.innerHTML = "ADDITIONAL DETAILS";
       k.innerHTML = "What To Expect";
       l.innerHTML = "Lodging";

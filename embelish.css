@@ -238,7 +238,11 @@ border-bottom: 1px solid black;
     color: var(--dark-gray);  
     font-size: 1em;
 }
-
+.menu a:hover
+{
+    border-bottom: 1px solid var(--dark-gray);
+    transition-timing-function: ease-in-out;
+}
 .ceremony-wrapper img, .reception-wrapper img
 {
 width: calc(var(--image-size) * .5);
@@ -482,7 +486,7 @@ border-radius: 2em;
 }
 .checked:checked + .bar .ball
 {
-transform: translateX(3.35em);
+transform: translateX(2em);
 }
 .checked:checked + .bar 
 {
@@ -493,20 +497,21 @@ transform: translateX(3.35em);
 {
 background-color: rgb(103, 175, 241);
 color: white;
-width: 5em;
-height: 1.5em;
+width: 4em;
+height: 2em;
 display: block;
-margin: auto;
 position: relative;
-top: -2em;
-border-radius: .75em;
+left: 3%;
+top: 2em;
+border-radius: 1em;
 display: flex;
 align-items: center;
+z-index: 10;
 }
 .ball
 {
-   width: 1em;
-   height: 1em;
+   width: 1.4em;
+   height: 1.4em;
    background-color: white;
    position: relative;
    border-radius: 50%;
@@ -566,7 +571,7 @@ height: 7.2rem;
 }
 .circle
   {
-      top: 250px;
+      top: 100px;
   }
 }
 @media only screen and (min-width: 999px)
@@ -675,7 +680,7 @@ font-size: 1.5em;
 }
 .circle
   {
-      top: 300px;
+      top: 100;
   }
 }
 @media only screen and (min-width: 1100px)
@@ -688,7 +693,7 @@ top: -.05;
 }
 .circle
   {
-      top: 350px;
+      top: 100px;
   }
 }
 @media only screen and (min-width: 1200px)
@@ -699,3 +704,4 @@ width: 45%;
 left: 27.5%;
 }
 }
+/* choose language */
