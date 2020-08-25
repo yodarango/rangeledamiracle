@@ -31,6 +31,7 @@ height: 6rem;
 background-color: var(--sage-green);
 position: fixed;
 z-index: 50;
+top: 0;
 }
 header h2
 {
@@ -74,17 +75,20 @@ height: 6rem;
   stroke-width: 5px;
   z-index: 10;
   position: absolute;
-  transform: rotate(-65deg);
   transform-origin: center;
+}
+#circle
+{
+    transform: rotateY(180deg) rotateZ(-87deg);
 }
 #circle2
 {
-    transform: rotate(-80deg);  
+    transform: rotateY(180deg) rotateZ(-87deg);  
     visibility: hidden;
 }
 #circle3
 {
-    transform: rotate(-85deg); 
+    transform: rotateY(180deg) rotateZ(-87deg); 
     visibility: hidden;
 }
 #countdown
@@ -120,6 +124,7 @@ z-index: 10;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       opacity: 0;
       z-index: 0;
       animation-name: imageAnimation;
@@ -457,7 +462,7 @@ text-decoration: underline;
     position: relative;
     top: 80%;
 }
-#rsvp
+.rsvp, .rsvp2
 {
 display: block;
 width: 20%;
@@ -471,7 +476,11 @@ border: 1px solid pink;
 padding: .8em 1em;
 border-radius: 2em;
 }
-#rsvp:hover
+.rsvp2
+{
+    bottom: -40%;
+}
+[class*="rsvp"]:hover
 {
     background-color: pink;
     color: white;
@@ -484,16 +493,16 @@ border-radius: 2em;
   visibility: hidden;
   position: absolute;
 }
-.checked:checked + .bar .ball
+.checked:checked + .bar .ball, .checked2:checked + .bar2 .ball2
 {
 transform: translateX(2em);
 }
-.checked:checked + .bar 
+.checked:checked + .bar, .checked2:checked + .bar2 
 {
     background-color: rgb(150, 236, 150);
     transition: 700ms;
 }
-.bar
+.bar, .bar2
 {
 background-color: rgb(103, 175, 241);
 color: white;
@@ -508,7 +517,7 @@ display: flex;
 align-items: center;
 z-index: 10;
 }
-.ball
+.ball, .ball2
 {
    width: 1.4em;
    height: 1.4em;
@@ -518,6 +527,10 @@ z-index: 10;
    left: 4%;
    padding: .1em;
    transition: 500ms;
+}
+.bar2
+{
+    top: 8rem; 
 }
   footer
 {
@@ -533,6 +546,87 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+
+/***** ABOUT US PAGE ********/
+
+#storyBrideGroom, #storyBrideGroom2
+{
+    position: relative;
+    margin-top: 10rem;
+}
+.storyBrideGroomP, .storyBrideGroomP2
+{
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.2em;
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+#sbg-flowers 
+{
+    width: 50%;
+    margin: auto;
+}
+#sbg-flowers img
+{
+width: calc(var(--image-size) * .5);
+position: relative;
+top: -1rem;
+}
+#storyBrideGroom2, #storyBrideGroom3
+{
+    margin: 0 auto;
+    top: 0;
+    background: url(/images/4.JPG);
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#name, #name2
+{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.sbg-wrapper
+{
+    background-color: rgb(240, 240, 240);
+    box-shadow: inset 0px 5px 30px rgba(201, 201, 201, 0.7);
+}
+.fun-facts
+{
+    width: 70%;
+    text-align: center;
+    margin:auto;
+    margin-top: 2rem;
+    font-size: 2em;
+    position: relative;
+    top: 3rem;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: bolder;
+}
+#fun-factsP
+{
+    width: 70%;
+    text-align: center;
+    margin:auto;
+    margin-top: 1rem;
+    padding-bottom: 8rem;
+}
+.footer-spacer
+{
+    width: 100%;
+    height: 13rem;
+    position: relative;
+}
+
 @media only screen and (min-width: 750px)
 {
    .menu a 
@@ -560,19 +654,55 @@ font-size: 4.8rem;
 height: 7.2rem;
 }
 #circle
-{
-    transform: rotate(-80deg);  
+{ 
     visibility: hidden;
 }
 #circle2
 {
-    transform: rotate(-85deg); 
     visibility: visible;
 }
 .circle
   {
       top: 100px;
   }
+  .footer-spacer
+{
+    width: 100%;
+    height: 15rem;
+    position: relative;
+}
+
+/***ABOUT US PAGE******/
+
+#storyBrideGroom
+{
+    margin-top: 13rem;
+}
+.storyBrideGroomP
+{
+    font-size: 1.5em;
+    width: 70%;
+    margin-top: 3rem;
+}
+#storyBrideGroom2, #storyBrideGroom3
+{
+    height: 15rem;
+}
+.fun-facts
+{
+    font-size: 3rem;
+}
+#name, #name2
+{
+    font-size: 3rem;
+}
+
+.footer-spacer
+{
+    width: 100%;
+    height: 18rem;
+    position: relative;
+}
 }
 @media only screen and (min-width: 999px)
 {
@@ -655,7 +785,7 @@ font-size: 70px;
 {
 text-decoration: underline;
 }
-#rsvp
+.rsvp, .rsvp2
 {
 font-size: 45px;
 width: 200px;
@@ -670,18 +800,51 @@ font-size: 1.5em;
 }
 #circle2
 {
-    transform: rotate(-80deg);  
     visibility: hidden;
 }
 #circle3
 {
-    transform: rotate(-85deg); 
     visibility: visible;
 }
 .circle
   {
       top: 100;
   }
+
+  /****ABOUT US PAGE*****/
+
+  #storyBrideGroom
+  {
+      position: relative;
+      margin-top: 10rem;
+  }
+  .storyBrideGroomP
+  {
+      font-size: 2em;
+  }
+  #storyBrideGroom2, #storyBrideGroom3
+  {
+      height: 16rem;
+  }
+  #name, #name
+  {
+      font-size: 3.5rem;
+  }
+  .fun-facts
+  {
+      top: 5rem;
+      font-size: 4em;
+  }
+  #fun-factsP
+  {
+      margin-top: 7rem;
+      padding-bottom: 12rem;
+  }
+  .footer-spacer
+  {
+      height: 25rem;
+  }
+  
 }
 @media only screen and (min-width: 1100px)
 {
@@ -695,6 +858,58 @@ top: -.05;
   {
       top: 100px;
   }
+
+  /***ABOUT US PAGE****/
+
+  #storyBrideGroom
+{
+    margin-top: 14rem;
+}
+.storyBrideGroomP
+{
+    font-size: 37px;
+    width: 700PX;
+    margin-top: 5rem;
+
+}
+#sbg-flowers 
+{
+    width: 500px;
+}
+#sbg-flowers img
+{
+width: 500px;
+}
+#storyBrideGroom2, #storyBrideGroom3
+{
+    height: 17rem;
+}
+#name, #name
+{
+    font-size: 4.3rem;
+}
+
+.fun-facts
+{
+    width: 700px;
+    text-align: center;
+    margin:auto;
+    margin-top: 6rem;
+    font-size: 5em;
+    position: relative;
+    top: 6rem;
+}
+#fun-factsP
+{
+    width: 700px;
+    margin-top: 6rem;
+}
+.footer-spacer
+{
+    width: 100%;
+    height: 25rem;
+    position: relative;
+}
 }
 @media only screen and (min-width: 1200px)
 {
@@ -703,5 +918,11 @@ top: -.05;
 width: 45%;
 left: 27.5%;
 }
+.footer-spacer
+{
+    width: 100%;
+    height: 25rem;
+    position: relative;
 }
-/* choose language */
+}
+/*Our Story, Bride, and Groom page*/

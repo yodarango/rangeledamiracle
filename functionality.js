@@ -36,11 +36,14 @@ var x = setInterval(function() {
 }, 1000);
 
 //detecting safari browser to reload 
-let userAgentString = navigator.userAgent;
+/*let userAgentString = navigator.userAgent;
 let safariAgent = userAgentString.indexOf("Safari") > -1;
-let firstwh = window.innerWidth;
+wh = window.innerWidth;
 
-if ((safariAgent) && (firstwh != window.innerWidth)){ 
+if (safariAgent)
+{ 
+  if(wh )
 alert('hello' + navigator.userAgent + '    ' + wh);
 } 
+*/
 
