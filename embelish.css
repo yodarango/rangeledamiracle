@@ -11,6 +11,7 @@
 --main-font: 'Julius Sans One', sans-serif;
 --dark-gray: rgb(32, 32, 32);
 --image-size: 100vw;
+--pollaroid-size: 22rem;
 }
 body
 {
@@ -200,28 +201,6 @@ position: relative;
 left: 18%;
 top: calc(var(--image-size) * -0.02);
 }
-/*side sitcky with dark mode and spanish 
-didnt really like it
-#settings
-{
-width: 3em;
-height: 6em;
-background-color: rgba(163, 163, 163, 0.1);
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: 1.5fr 2fr;
-position: sticky;
-z-index: 20;
-top: 50%;
-left: 100%;
-border-top-left-radius: 1rem;
-border-bottom-left-radius: 1rem;
-row-gap: 1px;
-}
-#settings >div:nth-child(1)
-{
-border-bottom: 1px solid black;
-}*/
 .menu
 {
     display: flex;
@@ -925,4 +904,144 @@ left: 27.5%;
     position: relative;
 }
 }
-/*Our Story, Bride, and Groom page*/
+
+/*More Info Page*/
+.pollaroid
+{
+    width: 100%;
+    height: 26rem;
+    margin: auto;
+    overflow: scroll;
+    position: relative;
+    background-color: rgb(226, 226, 226);
+    box-shadow: inset 5px 0 ;
+}
+.pollaroid > div
+{
+width: 22rem;
+height: 18rem;
+background: white;
+position: absolute;
+border-radius: 1em;
+top: 4rem;
+}
+.img-pollaroid
+{
+    width: 90%;
+    height: 65%;
+    top: 1rem;
+    left: 5% !important;
+    position: relative;
+    border-radius: 1rem;
+}
+.img-pollaroid1
+{
+    background: url(../images/gardens.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid2
+{
+    background: url(../images/hotsprings.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid3
+{
+    background: url(../images/magicpark.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid4
+{
+    background: url(../images/gangstermuseum.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid5
+{
+    background: url(../images/zoo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid6
+{
+    background: url(../images/stickyz.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid7
+{
+    background: url(../images/pantry.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid8
+{
+    background: url(../images/rootcafe.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid9
+{
+    background: url(../images/loblolly.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid10
+{
+    background: url(../images/yogurt.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pollaroid div:nth-child(1)
+{
+    left: 2rem;
+}
+.pollaroid div:nth-child(2)
+{
+    left: 26rem;
+}
+.pollaroid div:nth-child(3)
+{
+    left: 50rem;
+}
+.pollaroid div:nth-child(4)
+{
+    left: 74rem;
+}
+.pollaroid div:nth-child(5)
+{
+    left: 98rem;
+}
+.pollaroid div:nth-child(6)
+{
+    left: 122rem;
+}
+.pollaroid div:nth-child(7)
+{
+    left: 146rem;
+}
+.pollaroid div:nth-child(8)
+{
+    left: 170rem;
+}
+.pollaroid div:nth-child(9)
+{
+    left: 194rem;
+}
+.pollaroid div:nth-child(10)
+{
+    left: 218rem;
+    right: 2rem;
+}
