@@ -33,7 +33,7 @@ let language = function()
       k.innerHTML = "Como Va A Ser";
       l.innerHTML = "Hospedaje";
       m.outerHTML = '<a id="page3" href="#">Attracciones en<br>Hot Springs</a>';
-      n.innerHTML = "Regalar";
+      n.innerHTML = "Obsequios";
     } else {
       a.innerHTML = "THE BRIDE";
       b.innerHTML = "OUR STORY";
@@ -152,7 +152,7 @@ let language3 = function()
 {
 
   let abb = document.querySelector("#what-to-expect");
-  let cbb = document.querySelector(".storyBrideGroomP-Moreinfo");
+  let cbb = document.querySelector("#storyBrideGroomP-Moreinfo1");
   let dbb = document.querySelector("#pollaroid1 A P");
   let ebb = document.querySelector("#pollaroid2 A P");
   let fbb = document.querySelector("#pollaroid3 A P");
@@ -163,12 +163,20 @@ let language3 = function()
   let kbb = document.querySelector("#pollaroid8 A P");
   let lbb = document.querySelector("#pollaroid9 A P");
   let mbb = document.querySelector("#pollaroid10 A P");
+  let nbb = document.querySelector("#more-info-sections-1");
+  let obb = document.querySelector("#more-info-sections-2");
+  let pbb = document.querySelector("#more-info-sections-3");
+  let qbb = document.querySelector("#more-info-sections-4");
+  let rbb = document.querySelector("#storyBrideGroomP-Moreinfo2");
+  let sbb = document.querySelector("#storyBrideGroomP-Moreinfo3");
+  let tbb = document.querySelector("#storyBrideGroomP-Moreinfo4");
+  
 
   if (document.querySelector(".checked2").checked)
   {
-    abb.innerHTML = "QUE ESPERAR";
+    abb.innerHTML = "MAS DETALLES";
     cbb.innerHTML = "Nosotros queremos que nuestra boda sea una representacion de nuestra fé, personalidad, intereses, y cultura" +
-    " La ceremonia de bodas y la recepcion estarà llena con differentes tradiciones, comida, musica, y actividades que representan " +
+    ". La ceremonia de bodas y la recepcion estarà llena con differentes tradiciones, comida, musica, y actividades que representan " +
     "ambas culturas como es de esperarse en una boda Mexico-Americana.";
     dbb.innerHTML = "Disfruta de los hermosos jardines afueras de la parroquia. Gratis para todos los invitados.";
     ebb.innerHTML = "Aguas termales, vistas al monte, senderos, arollos, y más";
@@ -180,6 +188,50 @@ let language3 = function()
     kbb.innerHTML = "Todo lo que cocinamos viene de granjeros locales"
     lbb.innerHTML = "Deliciosa nieve, bocadillos dulces e ingredientes temporales hechos a mano";
     mbb.innerHTML = "El mejor yogurt congelado en la ciudad de Little Rock";
+    nbb.innerHTML = "QUE ESPERAR";
+    obb.innerHTML = "HOSPEDAJE"
+    pbb.innerHTML = "OBSEQUIOS";
+    qbb.innerHTML = "ATRACCIONES";
+    rbb.innerHTML = "Estamos concientes de la larga distancia de nuestro evento para ambas familias. Por lo tanto, pensamos que lo menos que podemos " + 
+    "hacer es proveer un proceso mas facil de hospedaje. En este momento estamos trabajando con diferentes hoteles para proveer descuentos en hoteles especificos " + 
+    "para todos nuestros invitados. Mas detalles aun estar por venir mientras la fecha se avecina. Mientras tanto, pensamos que seria buena idea darte algunas opciones que pensamos que " +
+    " te pueden gustar. Estas, opciones no estan asociadas con nuestro evento y por lo tanto no ofrecen descuentos a nuestros invitados. Como quiera, talvez aun puede que " + 
+    "encunetres algunas buenas ofertas si reservas a tiempo. Ya sea ques estes buscando una cabaña familiar o simplemente un cuarto de hotel estas opciones pueden ayudar.";
+    sbb.innerHTML = "Lo mas importante para nosotros es tener en compania a todos nuestros invitados. Es por eso que nuestro mas grande anhelo es que todos se sientan comodos y sin " +
+    "la espectativa de la obligacion a obsequiar alguna cosa. Pero como la costumbre es en una boda queremos dar la oportunidad a todos nuestro invitados que saben cuan dificil es comenzar una " +
+    "nueva vida desde zero como matrimonio y gusten ayudarnos."
+    tbb.innerHTML = "Queremos que tengas tanta divercion como puedas y hagas de tu viaje lo mejor. En la galeria de abajo hemos sugerido algunas opciones de cosas que puedes hacer o lugares que " +
+    "puedes visitar durante tu estancia en Hot Springs. Estas opciones abarcan desde divercion familiar hasta los lugares mas populares para satisfacer tu hambre.";
+  }
+  else 
+  {
+    abb.innerHTML = "MORE DETAILS";
+    cbb.innerHTML = "We want to make our wedding a representation of our faith, personalities, interests, and background. The wedding ceremony and reception will be filled with " + 
+    "different traditions, food, music and activities that will represent both of our cultures as it is to expect in a Mexican-American wedding. " +
+    "More specific details are yet to come as the date approaches!";
+    dbb.innerHTML = "Enjoy the gorgeous garden scenery of the Anthony Chapel. Free to all wedding guests";
+    ebb.innerHTML = "Thermal springs, mountain views, incredible geology, hikes, and creeks";
+    fbb.innerHTML = "Water and Theme park great for the family";
+    gbb.innerHTML = "Take yourself back to the days of the 20's, 30's, and 40's";
+    hbb.innerHTML = "Connect with amazing wild life";
+    ibb.innerHTML = "Best chicken in Little Rock";
+    jbb.innerHTML = "The Pantry Eateries offer Czech and German classic dishes";
+    kbb.innerHTML = "Everything cooked comes from local farms"
+    lbb.innerHTML = "Small-batch, handcrafted ice cream and sweet treats made from local and seasonal ingredients";
+    mbb.innerHTML = "Best frozen yogurts in Little Rock";
+    nbb.innerHTML = "WHAT TO EXPECT";
+    obb.innerHTML = "LODGING"
+    pbb.innerHTML = "REGISTRY";
+    qbb.innerHTML = "WHAT TO DO";
+    rbb.innerHTML = "We understand the long commute to this event for both sides of the party guests. Therefore, we think that the least we can do is to help make the lodgiong process " + 
+    "a little easier. At the moment, we are working with participating hotels in the area that could offer a discount to all of our party guests. " +
+    "More details are yet to come about it as the date approaches. In the mean time, we thought we could provide you with a few options that we think you might like. These options are not " + 
+    "associated to our event, and therefore we apologize that no discounts are available. However, you might still find some great deals if booked on time. Whether you are looking for a cabin or simply a room hotel these options might help.";
+    sbb.innerHTML = "The most important thing for us is to have all of our guests sharing this special moment with us. " +
+    "Therefore it is our biggest desire to never make our guests feel compromised to gift us anything. However, as we all know starting a brand new home from the ground up can be a " + 
+    "financially strenous task and are thankful for those who want to support us in starting this new life by donations of any kind.";
+    tbb.innerHTML = "We want you to make the best of your trip, therefore, below are some options that we think you might enjoy visiting while in town. These options range from attractions " + 
+    "to some of the most popular places to eat."
   }
 }
 
