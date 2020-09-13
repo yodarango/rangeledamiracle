@@ -1,3 +1,4 @@
+
 let language = function() 
 {
     let a = document.querySelector("#bride");
@@ -14,6 +15,7 @@ let language = function()
     let l = document.querySelector("#page2");
     let m = document.querySelector("#page3");
     let n = document.querySelector("#page4");
+
   
     if (document.querySelector(".checked").checked) {
       a.innerHTML = "LA NOVIA";
@@ -21,11 +23,11 @@ let language = function()
       c.innerHTML = "EL NOVIO";
       d.innerHTML = "CEREMONIA";
       e.outerHTML =
-        '<p id="date"><span class="date">Junio 19, 2021 6:30</span><br>123 una calle <br>Hot Springs, AK 37777</p>';
+        '<p id="date"><span class="date">Junio 19, 2021 6:30</span><br>550 Arkridge Rd <br>Hot Springs, AR 71913</p>';
       f.innerHTML = "Como Llegar";
       g.innerHTML = "RECEPCION";
       h.outerHTML =
-        '<p id="address2"><span class="date">Junio 19, 2021 Terminando La Ceremonia</span><br> 123 Una Calle <br> Hot Springs, AK 37777</p>';
+        '<p id="address2"><span class="date">Junio 19, 2021 Terminando La Ceremonia</span><br> 550 Arkridge Rd <br>Hot Springs, AR 71913</p>';
       i.innerHTML = "Como Llegar";
       j.innerHTML = "MAS DETALLES";
       k.innerHTML = "Como Va A Ser";
@@ -38,11 +40,11 @@ let language = function()
       c.innerHTML = "THE GROOM";
       d.innerHTML = "CEREMONY";
       e.outerHTML =
-        '<p id="date"><span class="date">June 19th, 2021 6:30</span><br>123 Some Street <br>Hot Springs, AK 37777</p>';
+        '<p id="date"><span class="date">June 19th, 2021 6:30</span><br>550 Arkridge Rd <br>Hot Springs, AR 71913</p>';
       f.innerHTML = "Get Directions";
       g.innerHTML = "RECEPTION";
       h.outerHTML =
-        '<p id="address2"><span class="date">June 19th, 2021 Following Ceremony</span><br> 123 Some Street <br> Hot Springs, AK 37777</p>';
+        '<p id="address2"><span class="date">June 19th, 2021 Following Ceremony</span><br>550 Arkridge Rd <br>Hot Springs, AR 71913</p>';
       i.innerHTML = "Get Directions";
       j.innerHTML = "ADDITIONAL DETAILS";
       k.innerHTML = "What To Expect";
@@ -64,6 +66,9 @@ let language = function()
     let uvw = document.querySelector("#storyBrideGroomP3");
     let wxy = document.querySelector("#fun-facts2");
     let zzz = document.querySelector(".funfactsP2");
+
+    let box = document.querySelector('.checked2');
+    localStorage.setItem('checked2', box.checked);
 
     if (document.querySelector(".checked2").checked)
     {
@@ -102,6 +107,9 @@ let language = function()
       'Animal Favorito: Lobo <br>' +
       'Pasatiempo Favorito: Ciclismo de montaña, gimnasio, leer<br>' +
       'Comida Favorita: Lasagna <br></p>';
+
+     
+
   } else 
   {
     abc.innerHTML = "OUR STORY"
@@ -137,5 +145,46 @@ let language = function()
     'Favorite Animal: Wolf <br>' +
     'Favorite Hobbies: Mountain Biking, Wegiht Lifting<br>' +
     'Favorite Food: Lasagna <br></p>';
+ }
+}
+
+let language3 = function()
+{
+
+  let abb = document.querySelector("#what-to-expect");
+  let cbb = document.querySelector(".storyBrideGroomP-Moreinfo");
+  let dbb = document.querySelector("#pollaroid1 A P");
+  let ebb = document.querySelector("#pollaroid2 A P");
+  let fbb = document.querySelector("#pollaroid3 A P");
+  let gbb = document.querySelector("#pollaroid4 A P");
+  let hbb = document.querySelector("#pollaroid5 A P");
+  let ibb = document.querySelector("#pollaroid6 A P");
+  let jbb = document.querySelector("#pollaroid7 A P");
+  let kbb = document.querySelector("#pollaroid8 A P");
+  let lbb = document.querySelector("#pollaroid9 A P");
+  let mbb = document.querySelector("#pollaroid10 A P");
+
+  if (document.querySelector(".checked2").checked)
+  {
+    abb.innerHTML = "QUE ESPERAR";
+    cbb.innerHTML = "Nosotros queremos que nuestra boda sea una representacion de nuestra fé, personalidad, intereses, y cultura" +
+    " La ceremonia de bodas y la recepcion estarà llena con differentes tradiciones, comida, musica, y actividades que representan " +
+    "ambas culturas como es de esperarse en una boda Mexico-Americana.";
+    dbb.innerHTML = "Disfruta de los hermosos jardines afueras de la parroquia. Gratis para todos los invitados.";
+    ebb.innerHTML = "Aguas termales, vistas al monte, senderos, arollos, y más";
+    fbb.innerHTML = "Parque de atracciones excelente para la familia";
+    gbb.innerHTML = "Viaja a los años 20's, 30's, y 40's";
+    hbb.innerHTML = "Conectate con la sorprendente vida salvaje";
+    ibb.innerHTML = "El mejor pollo en la ciudad de Little Rock";
+    jbb.innerHTML = "Prueba la mejor comida Checa y Alemana y mas platillos Europeos";
+    kbb.innerHTML = "Todo lo que cocinamos viene de granjeros locales"
+    lbb.innerHTML = "Deliciosa nieve, bocadillos dulces e ingredientes temporales hechos a mano";
+    mbb.innerHTML = "El mejor yogurt congelado en la ciudad de Little Rock";
   }
+}
+
+function load(){    
+  var remember= JSON.parse(localStorage.getItem('checked2'));
+  document.querySelector(".checked2").checked = remember;
+
 }

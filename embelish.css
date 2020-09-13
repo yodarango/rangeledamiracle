@@ -4,6 +4,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    
 }
 :root
 {
@@ -13,9 +14,14 @@
 --image-size: 100vw;
 --pollaroid-size: 22rem;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
 body
 {
     background-color: #f2f2f2;
+    color: var(--dark-gray);
 }
 body::-webkit-scrollbar
 {
@@ -445,7 +451,7 @@ text-decoration: underline;
 {
 display: block;
 width: 20%;
-height: 1em;
+height: 3em;
 margin: auto;
 text-align: center;
 position: relative;
@@ -453,37 +459,48 @@ bottom: calc(var(--image-size) * .15);
 font-family: var(--main-font);
 border: 1px solid pink;
 padding: .8em 1em;
-border-radius: 2em;
+border-radius: 3em;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .rsvp2
 {
     bottom: -40%;
 }
-[class*="rsvp"]:hover
+.rsvp:hover, .rsvp2:hover
 {
     background-color: pink;
     color: white;
     transform: scale(.9);
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+[class*= "bar"]:hover
+{
+    cursor: pointer;
 }
 #checkbox
 {
   visibility: hidden;
   position: absolute;
 }
-.checked:checked + .bar .ball, .checked2:checked + .bar2 .ball2
+.checked:checked + .bar .ball, .checked2:checked + .bar2 .ball2, 
+.checked3:checked + .bar3 .ball3
 {
 transform: translateX(2em);
 }
 .checked:checked + .bar, .checked2:checked + .bar2 
 {
-    background-color: rgb(150, 236, 150);
+    background: url(../images/MexicanFlag.png);
+    background-size: cover;
     transition: 700ms;
 }
 .bar, .bar2
 {
-background-color: rgb(103, 175, 241);
+background: url(../images/usaflag.png);
+background-size: cover;
 color: white;
 width: 4em;
 height: 2em;
@@ -511,7 +528,7 @@ z-index: 10;
 {
     top: 8rem; 
 }
-  footer
+footer
 {
 height: 6em;
 background: var(--sage-green);
@@ -525,6 +542,155 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+.footer
+{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    top: -.2rem;
+    position: relative;
+}
+/*RSVP Button Starts****/  
+  .body
+   {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    visibility: hidden;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
+  .rsvp-wrap
+   {
+    width: 80%;
+    height: 38rem;
+    background-color: white;
+    position: fixed;
+    left: 10%;
+    top: 15%;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    visibility: hidden;
+    z-index: 51;
+  }
+  .rsvp-wrap h2
+  {
+    font-size: 2em;
+    text-align: center;
+    padding: 0;
+    font-family: 'Palanquin', sans-serif;
+    margin-top: 2rem;
+  }
+  .rsvp-wrap p {
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.5em;
+    padding: 0;
+    text-align: center;
+
+  }
+  #guestnumber
+  {
+    position: relative;
+    width: 8rem;
+    height: 4rem;
+    margin: 4rem auto 0;
+    display: block;
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: rgba(255, 188, 200, .1);
+    border: 1px solid rgba(255, 188, 200, 1);
+    border-bottom: transparent;
+  }
+  #guestnumber:focus
+  {
+    outline: none;
+    background-color: rgba(255, 188, 200, .5);
+  }
+  .rsvp-code 
+  {
+    position: relative;
+    width: 8rem;
+    height: 4rem;
+    margin: auto;
+    display: block;
+    text-align: center;
+    top: .5rem;
+    border-right: 1px solid rgba(255, 188, 200, 1);
+    border-left: 1px solid rgba(255, 188, 200, 1);
+    border-top: transparent;
+    border-bottom: transparent;
+    background-color: rgba(255, 188, 200, .1);
+  }
+
+  .rsvp-code:focus
+  {
+    outline: none;
+    background-color: rgba(255, 188, 200, .5);
+  }
+  #submit 
+  {
+    position: relative;
+    width: 8rem;
+    height: 4rem;
+    margin: 1rem auto;
+    display: block;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border: 1px solid rgba(73, 116, 83, 1);
+    border-top: transparent;
+    background-color: rgba(73, 116, 83, 0.1);
+  }
+  #submit:focus
+  {
+    outline: none;
+    background-color: rgba(73, 116, 83, 0.5);
+  }
+  #submit:hover
+  {
+  cursor: pointer;
+  }
+  .sucess-image
+  {
+      width: 70%; 
+      left: 15%; 
+      position: relative; 
+      top: -14rem;
+      transition-duration: 500ms;
+      animation: grow 3s ease-in;
+  }
+  @keyframes grow 
+  {
+      0%{width: 50%; left: 25%;}
+      66%{width: 80%; left: 10%;}
+      100%{width: 70%; left: 15%;}
+  }
+  #close
+  {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border: 1px solid white;
+  }
+  #close:hover
+  {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition-duration: 300ms;
+    outline: none;
+  }
+/*****RSVP ends*****/
 
 /***** ABOUT US PAGE ********/
 
@@ -599,11 +765,324 @@ top: -1rem;
     margin-top: 1rem;
     padding-bottom: 8rem;
 }
+.rsvp3
+{
+    margin-top: 10rem;
+}
 .footer-spacer
 {
     width: 100%;
     height: 13rem;
     position: relative;
+}
+
+/******* MORE INFO **********/
+
+#what-to-expect
+{
+    margin-top: 10rem;
+    position: relative;
+    top: 2rem;
+}
+.more-info-sections
+{
+    margin: 0 auto;
+    margin-top: 8rem;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+#more-info-sections-1
+{
+background: url(../images/whattoexpect.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-position: bottom;
+}
+#more-info-sections-2
+{
+background: url(../images/lodgging.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-position: bottom;
+}
+#more-info-sections-3
+{
+background: url(../images/registry.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-position: bottom;
+margin-top: 0;
+}
+#more-info-sections-4
+{
+background: url(../images/whattodo.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-position: bottom;
+}
+.pollaroid
+{
+    width: 100%;
+    height: 26rem;
+    margin: 0 auto 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+    background-color: rgb(240, 240, 240);
+    box-shadow: inset 0px 5px 30px rgba(201, 201, 201, 0.7);
+}
+.pollaroid a:link
+{
+color: var(--dark-gray);
+}
+.pollaroid::-webkit-scrollbar
+{
+    height: 25px;
+}
+.pollaroid::-webkit-scrollbar-track
+{
+    background-color: rgb(240, 240, 240);
+    border-radius: 30px;
+    box-shadow: inset 0 0 5px rgb(255, 189, 189);
+    
+}
+.pollaroid::-webkit-scrollbar-thumb
+{
+background-color: rgba(255, 194, 204, 0.7);
+border-radius: 15px;
+}
+.pollaroid > div
+{
+width: 22rem;
+height: 18rem;
+background: white;
+position: absolute;
+border-radius: 1rem;
+top: 4rem;
+}
+.pollaroid > div:hover
+{
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, .2);
+    transform: scale(1.1) translate(0, -2rem);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(247, 229, 232);
+
+}
+.img-pollaroid
+{
+    width: 90%;
+    height: 65%;
+    top: 1rem;
+    left: 5% !important;
+    position: relative;
+    border-radius: 1rem;
+}
+.img-pollaroid1
+{
+    background: url(../images/gardens.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid1
+{
+    background: url(../images/gardens.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid2
+{
+    background: url(../images/hotsprings.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid3
+{
+    background: url(../images/magicpark.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid4
+{
+    background: url(../images/gangstermuseum.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid5
+{
+    background: url(../images/zoo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid6
+{
+    background: url(../images/stickyz.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid7
+{
+    background: url(../images/pantry.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid8
+{
+    background: url(../images/rootcafe.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid9
+{
+    background: url(../images/loblolly.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-pollaroid10
+{
+    background: url(../images/yogurt.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#pollaroid1
+{
+    left: 2rem;
+}
+#pollaroid2
+{
+    left: 26rem;
+}
+#pollaroid3
+{
+    left: 50rem;
+}
+#pollaroid4
+{
+    left: 74rem;
+}
+#pollaroid5
+{
+    left: 98rem;
+}
+#pollaroid6
+{
+    left: 122rem;
+}
+#pollaroid7
+{
+    left: 146rem;
+}
+#pollaroid8
+{
+    left: 170rem;
+}
+#pollaroid9
+{
+    left: 194rem;
+}
+#pollaroid10
+{
+    left: 218rem;
+}
+.to-do-links:visited
+{
+color: var(--dark-gray);
+}
+.to-do-links h5, p
+{
+    position: relative;
+    top: 1rem;
+    width: 90%;
+    margin: auto;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.1rem;
+}
+.to-do-links p
+{
+top: .7rem;
+font-size: 1rem;
+line-height: 1.5rem;
+}
+.storyBrideGroomP-Moreinfo
+{
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+}
+.more-info-lodging
+{
+    width: 100%;
+    height: auto;
+    background-color: rgb(240, 240, 240);
+    box-shadow: inset 0px 5px 30px rgba(201, 201, 201, 0.7);
+    position: relative;
+    padding: 10% 0 10%;
+}
+.more-info-lodging ul
+{
+    width: 80%;
+    margin: 3% auto 0;
+    text-align: center;
+    position: relative;
+}
+.more-info-lodging ul li a
+{
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.2em;
+}
+.more-info-lodging ul li a:link
+{
+    color: var(--dark-gray);
+}
+.more-info-lodging ul li a:visited
+{
+    color: var(--dark-gray);
+}
+.more-info-lodging ul li a:hover
+{
+    text-decoration: underline;
+}
+@media only screen and (min-width: 600px)
+{
+    .rsvp-wrap
+    {
+        width: 70%;
+        left: 15%;
+    }
+    .sucess-image
+  {
+      width: 70%; 
+      left: 15%; 
+      position: relative; 
+      top: -16.5rem;
+      transition-duration: 500ms;
+      animation: grow 3s ease-in;
+  }
+  @keyframes grow 
+  {
+      0%{width: 50%; left: 25%;}
+      66%{width: 80%; left: 10%;}
+      100%{width: 70%; left: 15%;}
+  }
+  .rsvp3
+{
+    margin-top: 12rem;
+}
 }
 
 @media only screen and (min-width: 750px)
@@ -682,10 +1161,67 @@ height: 7.2rem;
     height: 18rem;
     position: relative;
 }
+
+/***MORE INFO PAGE***/
+.more-info-sections
+{
+    height: 15rem;
+}
+
+.more-info-lodging ul li a
+{
+    font-size: 2rem;
+}
+/**RSVP FORM STARTS***/
+.rsvp-wrap
+   {
+    width: 60%;
+    left: 20%;
+    top: 7%;
+    height: 44rem;
+  }
+
+  .rsvp-code, #guestnumber, #submit 
+  {
+    position: relative;
+    width: 10rem;
+    height: 6rem;
+  }
+
+  .rsvp-wrap h2
+  {
+      font-size: 3rem;
+  }
+  .sucess-image
+  {
+      width: 70%; 
+      left: 15%; 
+      position: relative; 
+      top: -18rem;
+  }
+  @keyframes grow 
+  {
+      0%{width: 50%; left: 25%;}
+      66%{width: 80%; left: 10%;}
+      100%{width: 70%; left: 15%;}
+  }
+  .rsvp3
+{
+    margin-top: 15rem;
+}
+}
+@media only screen and (min-width: 800px)
+{
+    .rsvp-wrap
+   {
+    width: 60%;
+    left: 20%;
+    top: 5%;
+    height: 50rem;
+  }
 }
 @media only screen and (min-width: 999px)
 {
-
 .menu a 
 { 
     font-size: 30px;
@@ -726,16 +1262,17 @@ height: 700px;
 {
     font-size: 50px;
 }
+
 .ceremony-wrapper h2, .reception-wrapper h2
 {
-
-
 font-size: 80px
 }
+
 .ceremony-wrapper p, .reception-wrapper p
 {
     font-size: 40px;
 }
+
 #flowers
 {
     width: 700px;
@@ -746,24 +1283,29 @@ font-size: 80px
     position: relative;
     top: calc(var(--image-size) * -.12);
 }
+
 .additional-details h2
 {
 font-size: 70px;
 }
+
 .links-table
 {
     width: 700px;
     height: 700px;
 }
+
 .last-child a 
 {
     font-size: 30px;
     top: -198px;
 }
+
 .last-child a:hover
 {
 text-decoration: underline;
 }
+
 .rsvp, .rsvp2
 {
 font-size: 45px;
@@ -772,19 +1314,23 @@ height: 50px;
 border: 1px solid pink;
 padding: 25px 40px;
 }
+
   footer
 {
 height: 150px;
 font-size: 1.5em;
 }
+
 #circle2
 {
     visibility: hidden;
 }
+
 #circle3
 {
     visibility: visible;
 }
+
 .circle
   {
       top: 100;
@@ -823,8 +1369,34 @@ font-size: 1.5em;
   {
       height: 25rem;
   }
-  
+
+  .sucess-image
+  {
+      width: 50%; 
+      left: 25%; 
+      position: relative; 
+      top: -20rem;
+  }
+  /****MORE INFO PAGE****/
+
+  .more-info-sections
+{
+  height: 17rem;  
 }
+  /****RSVP BUTTON****/
+.sucess-image
+{
+    width: 70%; 
+    left: 15%; 
+    position: relative; 
+    top: -20rem;
+}
+  .rsvp3
+{
+    margin-top: 17rem;
+}
+}
+
 @media only screen and (min-width: 1100px)
 {
      #hr 
@@ -889,6 +1461,18 @@ width: 500px;
     height: 25rem;
     position: relative;
 }
+.more-info-sections
+{
+  height: 22rem;  
+}
+.rsvp3
+{
+    margin-top: 22rem;
+}
+.sucess-image
+{
+    top: -22rem;
+}
 }
 @media only screen and (min-width: 1200px)
 {
@@ -903,145 +1487,14 @@ left: 27.5%;
     height: 25rem;
     position: relative;
 }
+.rsvp-wrap
+{
+    width: 40%;
+    left: 30%;
+}
+.sucess-image
+{
+    top: -19rem;
+}
 }
 
-/*More Info Page*/
-.pollaroid
-{
-    width: 100%;
-    height: 26rem;
-    margin: auto;
-    overflow: scroll;
-    position: relative;
-    background-color: rgb(226, 226, 226);
-    box-shadow: inset 5px 0 ;
-}
-.pollaroid > div
-{
-width: 22rem;
-height: 18rem;
-background: white;
-position: absolute;
-border-radius: 1em;
-top: 4rem;
-}
-.img-pollaroid
-{
-    width: 90%;
-    height: 65%;
-    top: 1rem;
-    left: 5% !important;
-    position: relative;
-    border-radius: 1rem;
-}
-.img-pollaroid1
-{
-    background: url(../images/gardens.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid2
-{
-    background: url(../images/hotsprings.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid3
-{
-    background: url(../images/magicpark.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid4
-{
-    background: url(../images/gangstermuseum.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid5
-{
-    background: url(../images/zoo.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid6
-{
-    background: url(../images/stickyz.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid7
-{
-    background: url(../images/pantry.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid8
-{
-    background: url(../images/rootcafe.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid9
-{
-    background: url(../images/loblolly.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.img-pollaroid10
-{
-    background: url(../images/yogurt.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.pollaroid div:nth-child(1)
-{
-    left: 2rem;
-}
-.pollaroid div:nth-child(2)
-{
-    left: 26rem;
-}
-.pollaroid div:nth-child(3)
-{
-    left: 50rem;
-}
-.pollaroid div:nth-child(4)
-{
-    left: 74rem;
-}
-.pollaroid div:nth-child(5)
-{
-    left: 98rem;
-}
-.pollaroid div:nth-child(6)
-{
-    left: 122rem;
-}
-.pollaroid div:nth-child(7)
-{
-    left: 146rem;
-}
-.pollaroid div:nth-child(8)
-{
-    left: 170rem;
-}
-.pollaroid div:nth-child(9)
-{
-    left: 194rem;
-}
-.pollaroid div:nth-child(10)
-{
-    left: 218rem;
-    right: 2rem;
-}

@@ -35,8 +35,6 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-document.querySelector(".pollaroid").scrollTo(200, 0);
-
 //detecting safari browser to reload 
 /*let userAgentString = navigator.userAgent;
 let safariAgent = userAgentString.indexOf("Safari") > -1;

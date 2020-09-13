@@ -51,32 +51,29 @@
   <ul class="menu">
     <li><a id="bride" href="thebride.html#storyBrideGroom2">THE BRIDE</a></li>
     <li><a id="story" href="thebride.html#storyBrideGroom">OUR STORY</a></li>
-    <li><a id="groom" href="thebride.storyBrideGroom3">THE GROOM</a></li>
+    <li><a id="groom" href="thebride.html#storyBrideGroom3">THE GROOM</a></li>
   </ul>
   <section class="ceremony-wrapper">
     <img src="/images/3.JPG">
     <div>
       <h2 id="ceremony">CEREMONY</h2>
       <p id="date"><span class="date">June 19th, 2021 6:30PM</span><br>
-        123 Some Street <br>
-        Hot Springs, AK 37777</p>
-      <a href="" class="get-directions">Get Directions</a>
+        550 Arkridge Rd  <br>
+        Hot Springs, AR 71913</p> <br>
+      <a id="get-directions" class="get-directions" href="https://goo.gl/maps/wqXsZM38fhuBYKoB7">
+       Get Directions</a>
       <hr>
     </div>
   </section>
-  <!--<p class="about">We, Alayna and Daniel, are very happy to have you join us 
-    in one of the most special day of our lives. The Ceremony will take place in the beautiful, Anthony Chapel 
-    at 6:30PM. We loved the place since the first day and also thought it would be a fair trip for both 
-    of our families who will be joining us from Utah, Kentuky, and Tennessee. 
-</p>-->
+
   <section class="reception-wrapper">
     <img src="/images/3.JPG">
     <div>
       <h2 id="reception">RECEPTION</h2>
       <p id="address2"><span class="date">June 19th, 2021 Following Ceremony</span><br>
-        123 Some Street <br>
-        Hot Springs, AK 37777</p>
-      <a href="" id="get-directions" class="get-directions">Get Directions</a>
+        550 Arkridge Rd <br>
+        Hot Springs, AR 71913</p> <br>
+      <a href="https://goo.gl/maps/wqXsZM38fhuBYKoB7" id="get-directions" class="get-directions">Get Directions</a>
       <hr>
     </div>
   </section>
@@ -88,32 +85,48 @@
         <div></div>
         <div></div>
         <div></div>
-        <div class="last-child"><a id="page1" href="#">What To Expect</a></div>
+        <div class="last-child"><a id="page1" href="moreinfo.html#more-info-sections-1">What To Expect</a></div>
       </div>
       <div class="sticky" id="sticky2">
         <div></div>
         <div></div>
         <div></div>
-        <div class="last-child"><a id="page2" href="#">Laudgging</a></div>
+        <div class="last-child"><a id="page2" href="moreinfo.html#more-info-sections-2">Lodging</a></div>
       </div>
       <div class="sticky" id="sticky3">
         <div></div>
         <div></div>
         <div></div>
-        <div class="last-child"><a id="page3" href="#">Things To Do <br>In Hot Springs</a></div>
+        <div class="last-child"><a id="page3" href="moreinfo.html#more-info-sections-4">Things To Do <br>In Hot Springs</a></div>
       </div>
       <div class="sticky" id="sticky4">
         <div></div>
         <div></div>
         <div></div>
-        <div class="last-child"><a id="page4" href="#">Registry</a></div>
+        <div class="last-child"><a id="page4" href="moreinfo.html#more-info-sections-3">Registry</a></div>
       </div>
     </div>
-    <a class="rsvp" href="">RSVP</a>
+    <div class="rsvp" href="">RSVP</div>
+
   </section>
+
+  <form class="rsvp-wrap">
+    <button id="close">X</button>
+    <h2>WELCOME</h2>
+    <p id = "form-instructions">Please enter the code printed in your invitation along with the number of guests to RSVP</p>
+    <input id="guestnumber" type="number" placeholder="0">
+    <input class="rsvp-code" action="submit" type="text" maxlength="5" placeholder="enter your code"></input>
+  <input id="submit" type="button" value="submit">
+  <p id="form-message"></p>
+  <img src="" alt="">
+  </form>
+
+  <div class= "body"></div>
+
   <footer>
-    <p>2020 YodarangoCreations &copy; | All rights reservred</p>
+    <p class = "footer" >2020 YodarangoCreations &copy; | All rights reservred</p>
   </footer>
+  <script src="rsvp.js"></script>
   <script src="lang.js"></script>
 </body>
 </html>

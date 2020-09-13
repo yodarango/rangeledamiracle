@@ -13,9 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100&display=swap" rel="stylesheet">
-  <title>RangeledaMiracle | Home</title>
+  <title>RangeledaMiracle | About Us</title>
 </head>
-<body>
+<body onload="load()">
   <script src="functionality.js"></script>
   <header>
     <h2>RangeledaMiracle</h2>
@@ -67,7 +67,7 @@
         to the beautiful heels of Appalacia in Knoxville, Tennessee at the direction of God's will. 
         He graduated in December, 2019 with his Bachelor's degree and currently works as a Software QA Engineer. 
         He plans to pursue his doctorates degree in Christian Apologetics in the fall of 
-        2021 and use it in every way possible for the glory of God. 
+        2021 and use it in every way possible for the glory of God.
       </p>
       <div class="sbg-wrapper">
         <h3 id="fun-facts2" class="fun-facts">Fun Facts</h3>
@@ -80,12 +80,28 @@
       </div>
 
       <div class="footer-spacer">
-        <a class="rsvp2" href="">RSVP</a>
+
+        <div class= "rsvp rsvp2" >RSVP</div>
+
+        <form class="rsvp-wrap">
+          <button id="close">X</button>
+          <h2>WELCOME</h2>
+          <p id = "form-instructions">Please enter the code printed in your invitation along with the number of guests to RSVP</p>
+          <input id="guestnumber" type="number" placeholder="0">
+          <input class="rsvp-code" action="submit" type="text" maxlength="5" placeholder="enter your code"></input>
+        <input id="submit" type="button" value="submit">
+        <p id="form-message"></p>
+        <img src="" alt="">
+        </form>
+
       </div>
 
+      <div class= "body"></div>
+
   <footer>
-    <p>2020 YodarangoCreations &copy; | All rights reservred</p>
+    <p class = "footer" >2020 YodarangoCreations &copy; | All rights reservred</p>
   </footer>
+  <script src="rsvp.js"></script>
   <script src="lang.js"></script>
 </body>
 </html>
