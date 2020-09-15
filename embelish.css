@@ -464,6 +464,89 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+.not-coming
+{
+    position: relative;
+    top: -2.5rem;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--dark-gray);
+    font-size:.7em;
+    font-family: var(--main-font);
+    transition-duration: 1000;
+    transition-timing-function: ease-in-out;
+}
+.not-coming2
+{
+    top: 6rem;;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    text-decoration: underline;
+    color: var(--dark-gray);
+    font-size:.7em;
+    font-family: var(--main-font);
+    transition-duration: 1000;
+    transition-timing-function: ease-in-out;
+}
+.not-coming3
+{
+    width: 20rem;
+    height: 25rem;
+    right: calc((100vw - 20rem) * 0.5);
+    background: white;
+    position: fixed;
+    z-index: 50;
+    top: calc((100vh - 25rem) * 0.5);
+    transition-duration: 500;
+    font-family: var(--main-font);
+}
+.no-coming-why
+{
+    font-family: var(--main-font);
+    font-size: 1.5em;
+    color: var(--dark-gray);
+    position: relative;
+    top: 4rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.no-coming-text
+{
+    text-align: center;
+    font-size: 1.8em;
+    position: relative;
+    top: 0;
+}
+.no-button
+{
+    width: 15rem;
+    height: 5rem;
+    color: white;
+    background: linear-gradient(45deg, rgb(255, 179, 179), rgb(255, 112, 112) );
+    border-radius: 2.5rem;
+    transition-duration: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10rem;
+    margin: auto;
+}
+.no-button:hover
+{
+transform: scale(.9);
+cursor: pointer;
+}
+.not-coming:hover, .not-coming2:hover
+{
+    transform: scale(.9);
+    cursor: pointer;
+}
 .rsvp2
 {
     bottom: -40%;
@@ -1057,6 +1140,8 @@ line-height: 1.5rem;
 {
     text-decoration: underline;
 }
+/***Not Coming ***/
+
 @media only screen and (min-width: 600px)
 {
     .rsvp-wrap
@@ -1082,6 +1167,10 @@ line-height: 1.5rem;
   .rsvp3
 {
     margin-top: 12rem;
+}
+.not-coming
+{
+    top: -5rem;
 }
 }
 
@@ -1161,7 +1250,16 @@ height: 7.2rem;
     height: 18rem;
     position: relative;
 }
-
+.not-coming
+{
+    top: -6rem;
+    font-size: 1em;
+}
+.not-coming2
+{
+    top: 8.2rem;
+    font-size: 1em;
+}
 /***MORE INFO PAGE***/
 .more-info-sections
 {
@@ -1178,7 +1276,7 @@ height: 7.2rem;
     width: 60%;
     left: 20%;
     top: 7%;
-    height: 44rem;
+    height: 46rem;
   }
 
   .rsvp-code, #guestnumber, #submit 
@@ -1209,6 +1307,10 @@ height: 7.2rem;
 {
     margin-top: 15rem;
 }
+.rsvp, .rsvp3, .rsvp2
+{
+    height: 2.5rem;
+}
 }
 @media only screen and (min-width: 800px)
 {
@@ -1218,6 +1320,10 @@ height: 7.2rem;
     left: 20%;
     top: 5%;
     height: 50rem;
+  }
+  #form-message
+  {
+      height: 5rem;
   }
 }
 @media only screen and (min-width: 999px)
@@ -1314,7 +1420,16 @@ height: 50px;
 border: 1px solid pink;
 padding: 25px 40px;
 }
-
+.not-coming
+{
+    top: -8rem;
+    font-size: 1.5em;
+}
+.not-coming2
+{
+    top: 11.5rem;
+    font-size: 1.5rem;
+}
   footer
 {
 height: 150px;
@@ -1395,6 +1510,10 @@ font-size: 1.5em;
 {
     margin-top: 17rem;
 }
+.rsvp, .rsvp2, .rsvp3
+{
+    height: 3rem;
+}
 }
 
 @media only screen and (min-width: 1100px)
@@ -1465,13 +1584,18 @@ width: 500px;
 {
   height: 22rem;  
 }
+.not-coming
+{
+    top: -10rem;
+    font-size: 1.5em;
+}
 .rsvp3
 {
     margin-top: 22rem;
 }
 .sucess-image
 {
-    top: -22rem;
+    top: -28rem;
 }
 }
 @media only screen and (min-width: 1200px)

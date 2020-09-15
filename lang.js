@@ -15,9 +15,12 @@ let language = function()
     let l = document.querySelector("#page2");
     let m = document.querySelector("#page3");
     let n = document.querySelector("#page4");
+    let o = document.querySelector(".rsvp-wrap H2");
+    let p = document.querySelector("#form-instructions");
 
   
-    if (document.querySelector(".checked").checked) {
+    if (document.querySelector(".checked").checked) 
+    {
       a.innerHTML = "LA NOVIA";
       b.innerHTML = "COMO PASO";
       c.innerHTML = "EL NOVIO";
@@ -34,6 +37,9 @@ let language = function()
       l.innerHTML = "Hospedaje";
       m.outerHTML = '<a id="page3" href="#">Attracciones en<br>Hot Springs</a>';
       n.innerHTML = "Obsequios";
+      o.innerHTML = "BIENVENIDO";
+      p.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
+      
     } else {
       a.innerHTML = "THE BRIDE";
       b.innerHTML = "OUR STORY";
@@ -51,6 +57,9 @@ let language = function()
       l.innerHTML = "Lodging";
       m.outerHTML = '<a id="page3" href="#">Things To Do <br>In Hot Springs</a>';
       n.innerHTML = "Registry";
+      o.innerHTML = "WELCOME";
+      p.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
+   
     }
   }
 
@@ -66,6 +75,8 @@ let language = function()
     let uvw = document.querySelector("#storyBrideGroomP3");
     let wxy = document.querySelector("#fun-facts2");
     let zzz = document.querySelector(".funfactsP2");
+    let cba = document.querySelector(".rsvp-wrap H2");
+    let fed = document.querySelector("#form-instructions");
 
     let box = document.querySelector('.checked2');
     localStorage.setItem('checked2', box.checked);
@@ -107,10 +118,11 @@ let language = function()
       'Animal Favorito: Lobo <br>' +
       'Pasatiempo Favorito: Ciclismo de montaña, gimnasio, leer<br>' +
       'Comida Favorita: Lasagna <br></p>';
-
-     
-
+      cba.innerHTML = "BIENVENIDO";
+      fed.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
+    
   } else 
+
   {
     abc.innerHTML = "OUR STORY"
     def.innerHTML = "Daniel and Alayna met June 19, 2019 in Covington, KY. The second service of General Ministries Conference" + 
@@ -136,7 +148,7 @@ let language = function()
     rst.innerHTML = "THE GROOM";
     uvw.outerHTML =  '<p id="storyBrideGroomP3" class="storyBrideGroomP"><span id="name2">Daniel</span> was born on June 2, 1995. In 2017 he relocated from his much-loved home city, Ogden, Utah ' +
    'to the beautiful heels of Appalacia in Knoxville, Tennessee at the direction of God\'s will. ' +
-   ' He graduated in December, 2019 with his Bachelor\'s degree and currently works as a Software QA Engineer. ' +
+   ' He graduated in December, 2019 with his Bachelor\'s degree. ' +
    ' He plans to pursue his doctorates degree in Christian Apologetics in the fall of ' +
    ' 2021 and use it in every way possible for the glory of God. </p>';
     wxy.innerHTML = "Fun Facts";
@@ -145,7 +157,9 @@ let language = function()
     'Favorite Animal: Wolf <br>' +
     'Favorite Hobbies: Mountain Biking, Wegiht Lifting<br>' +
     'Favorite Food: Lasagna <br></p>';
- }
+    cba.innerHTML = "WELCOME";
+    fed.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
+  }
 }
 
 let language3 = function()
@@ -170,10 +184,13 @@ let language3 = function()
   let rbb = document.querySelector("#storyBrideGroomP-Moreinfo2");
   let sbb = document.querySelector("#storyBrideGroomP-Moreinfo3");
   let tbb = document.querySelector("#storyBrideGroomP-Moreinfo4");
+  let ubb = document.querySelector(".rsvp-wrap H2");
+  let vbb = document.querySelector("#form-instructions");
   
 
   if (document.querySelector(".checked2").checked)
   {
+
     abb.innerHTML = "MAS DETALLES";
     cbb.innerHTML = "Nosotros queremos que nuestra boda sea una representacion de nuestra fé, personalidad, intereses, y cultura" +
     ". La ceremonia de bodas y la recepcion estarà llena con differentes tradiciones, comida, musica, y actividades que representan " +
@@ -202,6 +219,9 @@ let language3 = function()
     "nueva vida desde zero como matrimonio y gusten ayudarnos."
     tbb.innerHTML = "Queremos que tengas tanta divercion como puedas y hagas de tu viaje lo mejor. En la galeria de abajo hemos sugerido algunas opciones de cosas que puedes hacer o lugares que " +
     "puedes visitar durante tu estancia en Hot Springs. Estas opciones abarcan desde divercion familiar hasta los lugares mas populares para satisfacer tu hambre.";
+    ubb.innerHTML = "BIENVENIDO";
+    vbb.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
+
   }
   else 
   {
@@ -232,6 +252,8 @@ let language3 = function()
     "financially strenous task and are thankful for those who want to support us in starting this new life by donations of any kind.";
     tbb.innerHTML = "We want you to make the best of your trip, therefore, below are some options that we think you might enjoy visiting while in town. These options range from attractions " + 
     "to some of the most popular places to eat."
+    ubb.innerHTML = "WELCOME";
+    vbb.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
   }
 }
 
