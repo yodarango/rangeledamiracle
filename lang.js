@@ -1,3 +1,5 @@
+    let firstCheckedBox = document.querySelector(".checked")
+   let secondCheckedBox = document.querySelector(".checked2");
 
 let language = function() 
 {
@@ -17,6 +19,7 @@ let language = function()
     let n = document.querySelector("#page4");
     let o = document.querySelector(".rsvp-wrap H2");
     let p = document.querySelector("#form-instructions");
+    let q = document.querySelector(".no-coming-way");
 
   
     if (document.querySelector(".checked").checked) 
@@ -39,7 +42,8 @@ let language = function()
       n.innerHTML = "Obsequios";
       o.innerHTML = "BIENVENIDO";
       p.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
-      
+      q.innerHTML = "Estamos triste de escucharlo, graciapor avisarnos!";
+
     } else {
       a.innerHTML = "THE BRIDE";
       b.innerHTML = "OUR STORY";
@@ -59,12 +63,19 @@ let language = function()
       n.innerHTML = "Registry";
       o.innerHTML = "WELCOME";
       p.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
-   
+      q.innerHTML = "We are sadden to hear that! Thank you for letting us now!"
+
     }
   }
 
  let language2 = function()
   {
+ /****** this will save the last status of the checkbox
+    let box = document.querySelector('.checked2');
+    localStorage.setItem('chek2', box.checked);
+
+    */
+
     let abc = document.querySelector("#storyBrideGroom");
     let def = document.querySelector("#storyBrideGroomP");
     let gjh = document.querySelector("#storyBrideGroom2");
@@ -77,11 +88,9 @@ let language = function()
     let zzz = document.querySelector(".funfactsP2");
     let cba = document.querySelector(".rsvp-wrap H2");
     let fed = document.querySelector("#form-instructions");
+    let gih = document.querySelector(".no-coming-why");
 
-    let box = document.querySelector('.checked2');
-    localStorage.setItem('checked2', box.checked);
-
-    if (document.querySelector(".checked2").checked)
+    if (secondCheckedBox.checked)
     {
       abc.innerHTML = "NUESTRA HISTORIA"
       def.innerHTML = "Danel y Alayna se conocieron el 19 de Junio del 2019 en la ciudad de" + 
@@ -120,7 +129,8 @@ let language = function()
       'Comida Favorita: Lasagna <br></p>';
       cba.innerHTML = "BIENVENIDO";
       fed.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
-    
+      gih.innerHTML = "Estamos triste de escucharlo, graciapor avisarnos!"
+
   } else 
 
   {
@@ -159,6 +169,8 @@ let language = function()
     'Favorite Food: Lasagna <br></p>';
     cba.innerHTML = "WELCOME";
     fed.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
+    gih.innerHTML = "We are sadden to hear that! Thank you for letting us now!"
+
   }
 }
 
@@ -186,6 +198,7 @@ let language3 = function()
   let tbb = document.querySelector("#storyBrideGroomP-Moreinfo4");
   let ubb = document.querySelector(".rsvp-wrap H2");
   let vbb = document.querySelector("#form-instructions");
+  let yyy = document.querySelector(".no-coming-way");
   
 
   if (document.querySelector(".checked2").checked)
@@ -221,6 +234,7 @@ let language3 = function()
     "puedes visitar durante tu estancia en Hot Springs. Estas opciones abarcan desde divercion familiar hasta los lugares mas populares para satisfacer tu hambre.";
     ubb.innerHTML = "BIENVENIDO";
     vbb.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
+    yyy.innerHTML = "Estamos triste de escucharlo, graciapor avisarnos!"
 
   }
   else 
@@ -254,11 +268,16 @@ let language3 = function()
     "to some of the most popular places to eat."
     ubb.innerHTML = "WELCOME";
     vbb.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
+    yyy.innerHTML = "We are sadden to hear that! Thank you for letting us now!"
+  
   }
 }
 
+/****** This item will pull the saved the last status of the checkbox and load it when the body load (see funtion in body HTML) 
 function load(){    
-  var remember= JSON.parse(localStorage.getItem('checked2'));
+  var remember= JSON.parse(localStorage.getItem('chek2'));
   document.querySelector(".checked2").checked = remember;
 
 }
+
+*/

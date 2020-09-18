@@ -71,10 +71,12 @@ let notComing = document.querySelector(".not-coming2, .not-coming");
 notComing.addEventListener('click', () =>
 {
  
+  
+
   darkenScreen.style.visibility = 'visible';
   notComing.style.visibility = 'hidden';
 
-  let notComingDiv = document.createElement('DVI');
+  let notComingDiv = document.createElement('DIV');
   notComingDiv.setAttribute('class', 'not-coming3');
   document.body.appendChild(notComingDiv);
 
@@ -91,6 +93,33 @@ notComing.addEventListener('click', () =>
   noComingText.innerHTML = 'NOT COMING';
   noComingText.setAttribute('class', 'no-coming-text');
   noButton.appendChild(noComingText);
+
+  noButton.addEventListener('click', () => 
+   {
+    noButton.style.cssText = ' visibility: hidden; transition-duration: 0ms; '
+    noComingWhy.innerHTML = 'We are sadden to hear that! Thank you for letting us now!'
+    noComingWhy.style.top = '2rem';
+
+    if (secondCheckedBox.checked || firstCheckedBox.checked)
+    {
+      noComingWhy.innerHTML = 'Estamos tristes de saber la noticia, gracias por tu aviso!'
+    }
+
+    let sadFace = document.createElement('IMG');
+    sadFace.setAttribute('src', '../images/check.png');
+    sadFace.setAttribute('class', 'sad-face');
+
+    notComingDiv.appendChild(sadFace);
+  })
+
+  if (secondCheckedBox.checked)
+  {
+    noComingWhy.innerHTML = "Los siento, pero no podre asistir!";
+  }
+  /*else if (secondCheckedBox.checked == false)
+  {
+
+  }*/
 
   let x2 = document.querySelector('#close');
   notComingDiv.appendChild(x2);

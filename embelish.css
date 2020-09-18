@@ -478,6 +478,7 @@ justify-content: center;
     transition-duration: 1000;
     transition-timing-function: ease-in-out;
 }
+
 .not-coming2
 {
     top: 6rem;;
@@ -547,6 +548,15 @@ cursor: pointer;
     transform: scale(.9);
     cursor: pointer;
 }
+.sad-face
+{
+width: 70%;
+top: -2rem;
+position: relative;
+left: 15%;
+transition-duration: 500ms;
+animation: grow 3s ease-in;
+}
 .rsvp2
 {
     bottom: -40%;
@@ -564,7 +574,7 @@ cursor: pointer;
 {
     cursor: pointer;
 }
-#checkbox
+#checkbox, #checkbox2
 {
   visibility: hidden;
   position: absolute;
