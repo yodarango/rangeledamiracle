@@ -1,5 +1,5 @@
-    let firstCheckedBox = document.querySelector(".checked")
-   let secondCheckedBox = document.querySelector(".checked2");
+    let firstCheckedBox = document.querySelector(".checked");
+    let secondCheckedBox = document.querySelector(".checked2");
 
 let language = function() 
 {
@@ -11,7 +11,7 @@ let language = function()
     let f = document.querySelector(".get-directions");
     let g = document.querySelector("#reception");
     let h = document.querySelector("#address2");
-    let i = document.querySelector("#get-directions");
+    let i = document.querySelector(".get-directions2");
     let j = document.querySelector("#add-det");
     let k = document.querySelector("#page1");
     let l = document.querySelector("#page2");
@@ -19,10 +19,11 @@ let language = function()
     let n = document.querySelector("#page4");
     let o = document.querySelector(".rsvp-wrap H2");
     let p = document.querySelector("#form-instructions");
-    let q = document.querySelector(".no-coming-way");
+
+    localStorage.setItem('chek', firstCheckedBox.checked);
 
   
-    if (document.querySelector(".checked").checked) 
+    if (firstCheckedBox.checked) 
     {
       a.innerHTML = "LA NOVIA";
       b.innerHTML = "COMO PASO";
@@ -34,15 +35,14 @@ let language = function()
       g.innerHTML = "RECEPCION";
       h.outerHTML =
         '<p id="address2"><span class="date">Junio 19, 2021 Terminando La Ceremonia</span><br> 550 Arkridge Rd <br>Hot Springs, AR 71913</p>';
-      i.innerHTML = "Como Llegar";
+      i.innerHTML = "Como Llegar"
       j.innerHTML = "MAS DETALLES";
       k.innerHTML = "Como Va A Ser";
       l.innerHTML = "Hospedaje";
-      m.outerHTML = '<a id="page3" href="#">Attracciones en<br>Hot Springs</a>';
+      m.outerHTML = '<a id="page3" href="moreinfo.html#more-info-sections-4">Attracciones en<br>Hot Springs</a>';
       n.innerHTML = "Obsequios";
       o.innerHTML = "BIENVENIDO";
       p.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
-      q.innerHTML = "Estamos triste de escucharlo, graciapor avisarnos!";
 
     } else {
       a.innerHTML = "THE BRIDE";
@@ -55,26 +55,20 @@ let language = function()
       g.innerHTML = "RECEPTION";
       h.outerHTML =
         '<p id="address2"><span class="date">June 19th, 2021 Following Ceremony</span><br>550 Arkridge Rd <br>Hot Springs, AR 71913</p>';
-      i.innerHTML = "Get Directions";
-      j.innerHTML = "ADDITIONAL DETAILS";
+      i.innerHTML = "Get Directions"
+        j.innerHTML = "ADDITIONAL DETAILS";
       k.innerHTML = "What To Expect";
       l.innerHTML = "Lodging";
-      m.outerHTML = '<a id="page3" href="#">Things To Do <br>In Hot Springs</a>';
+      m.outerHTML = '<a id="page3" href="moreinfo.html#more-info-sections-4">Things To Do <br>In Hot Springs</a>';
       n.innerHTML = "Registry";
       o.innerHTML = "WELCOME";
       p.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
-      q.innerHTML = "We are sadden to hear that! Thank you for letting us now!"
 
     }
   }
 
  let language2 = function()
   {
- /****** this will save the last status of the checkbox
-    let box = document.querySelector('.checked2');
-    localStorage.setItem('chek2', box.checked);
-
-    */
 
     let abc = document.querySelector("#storyBrideGroom");
     let def = document.querySelector("#storyBrideGroomP");
@@ -88,7 +82,10 @@ let language = function()
     let zzz = document.querySelector(".funfactsP2");
     let cba = document.querySelector(".rsvp-wrap H2");
     let fed = document.querySelector("#form-instructions");
-    let gih = document.querySelector(".no-coming-why");
+    let hig = document.querySelector(".no-coming-why");
+
+
+    localStorage.setItem('chek2', secondCheckedBox.checked);
 
     if (secondCheckedBox.checked)
     {
@@ -129,8 +126,7 @@ let language = function()
       'Comida Favorita: Lasagna <br></p>';
       cba.innerHTML = "BIENVENIDO";
       fed.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
-      gih.innerHTML = "Estamos triste de escucharlo, graciapor avisarnos!"
-
+ 
   } else 
 
   {
@@ -165,11 +161,10 @@ let language = function()
     zzz.outerHTML = '<p id="fun-factsP" class="storyBrideGroomP funfactsP2">Favorite color: Gray <br>' +
     'Favorite Bible Verse: <span id="fav-verse" class="fav-verse">1 Peter 1:8</span> <br>' +
     'Favorite Animal: Wolf <br>' +
-    'Favorite Hobbies: Mountain Biking, Wegiht Lifting<br>' +
+    'Favorite Hobbies: Mountain Biking, Weight Lifting<br>' +
     'Favorite Food: Lasagna <br></p>';
     cba.innerHTML = "WELCOME";
     fed.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
-    gih.innerHTML = "We are sadden to hear that! Thank you for letting us now!"
 
   }
 }
@@ -198,10 +193,10 @@ let language3 = function()
   let tbb = document.querySelector("#storyBrideGroomP-Moreinfo4");
   let ubb = document.querySelector(".rsvp-wrap H2");
   let vbb = document.querySelector("#form-instructions");
-  let yyy = document.querySelector(".no-coming-way");
-  
 
-  if (document.querySelector(".checked2").checked)
+  localStorage.setItem('chek2', secondCheckedBox.checked);
+
+  if (secondCheckedBox.checked)
   {
 
     abb.innerHTML = "MAS DETALLES";
@@ -234,7 +229,6 @@ let language3 = function()
     "puedes visitar durante tu estancia en Hot Springs. Estas opciones abarcan desde divercion familiar hasta los lugares mas populares para satisfacer tu hambre.";
     ubb.innerHTML = "BIENVENIDO";
     vbb.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
-    yyy.innerHTML = "Estamos triste de escucharlo, graciapor avisarnos!"
 
   }
   else 
@@ -268,16 +262,44 @@ let language3 = function()
     "to some of the most popular places to eat."
     ubb.innerHTML = "WELCOME";
     vbb.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
-    yyy.innerHTML = "We are sadden to hear that! Thank you for letting us now!"
-  
+
+  }
+}
+//calls the local storage of the first page
+let load = function() 
+{
+
+  var remember= JSON.parse(localStorage.getItem('chek'));
+  firstCheckedBox.checked = remember;
+
+  if (firstCheckedBox.checked)
+  {
+    language();
+  }
+}
+//calls the local storage of the second page
+let load2 = function()
+{
+
+  var remember2= JSON.parse(localStorage.getItem('chek2'));
+  secondCheckedBox.checked = remember2;
+
+
+  if (secondCheckedBox.checked)
+  { 
+    language2();
   }
 }
 
-/****** This item will pull the saved the last status of the checkbox and load it when the body load (see funtion in body HTML) 
-function load(){    
-  var remember= JSON.parse(localStorage.getItem('chek2'));
-  document.querySelector(".checked2").checked = remember;
+let load3 = function()
+{
 
+  var remember3= JSON.parse(localStorage.getItem('chek2'));
+  secondCheckedBox.checked = remember3;
+
+
+  if (secondCheckedBox.checked)
+  { 
+    language3();
+  }
 }
-
-*/

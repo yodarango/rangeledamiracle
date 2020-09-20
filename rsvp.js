@@ -4,6 +4,7 @@ button.addEventListener("click", popup);
 let form = document.querySelector(".rsvp-wrap");
 let darkenScreen =  document.querySelector(".body");
 
+
 function popup() 
 {
   let x = document.querySelector("#close");
@@ -70,8 +71,6 @@ let notComing = document.querySelector(".not-coming2, .not-coming");
 
 notComing.addEventListener('click', () =>
 {
- 
-  
 
   darkenScreen.style.visibility = 'visible';
   notComing.style.visibility = 'hidden';
@@ -84,8 +83,9 @@ notComing.addEventListener('click', () =>
   noButton.setAttribute('class', 'no-button');
 
   let noComingWhy = document.createElement('P');
-  noComingWhy.textContent = 'I apologize, but i don\'t think I will make it!'
   noComingWhy.setAttribute('class', 'no-coming-why');
+
+  noComingWhy.innerHTML = 'I am sorry, I dont think I will make it!'
 
   notComingDiv.append(noComingWhy, noButton);
 
@@ -94,35 +94,14 @@ notComing.addEventListener('click', () =>
   noComingText.setAttribute('class', 'no-coming-text');
   noButton.appendChild(noComingText);
 
-  noButton.addEventListener('click', () => 
-   {
-    noButton.style.cssText = ' visibility: hidden; transition-duration: 0ms; '
-    noComingWhy.innerHTML = 'We are sadden to hear that! Thank you for letting us now!'
-    noComingWhy.style.top = '2rem';
-
-    if (secondCheckedBox.checked || firstCheckedBox.checked)
+  if ((document.body.outerHTML.indexOf('hospedaje') > -1) || (document.body.outerHTML.indexOf('NOVIO') > -1))
     {
-      noComingWhy.innerHTML = 'Estamos tristes de saber la noticia, gracias por tu aviso!'
+      noComingWhy.innerHTML = 'Lo siento, pero no creo que podre asistir!'
     }
-
-    let sadFace = document.createElement('IMG');
-    sadFace.setAttribute('src', '../images/check.png');
-    sadFace.setAttribute('class', 'sad-face');
-
-    notComingDiv.appendChild(sadFace);
-  })
-
-  if (secondCheckedBox.checked)
-  {
-    noComingWhy.innerHTML = "Los siento, pero no podre asistir!";
-  }
-  /*else if (secondCheckedBox.checked == false)
-  {
-
-  }*/
 
   let x2 = document.querySelector('#close');
   notComingDiv.appendChild(x2);
+
   x2.addEventListener('click', () =>
   {
     darkenScreen.style.visibility = 'hidden';
@@ -130,6 +109,26 @@ notComing.addEventListener('click', () =>
     notComingDiv.style.visibility = 'hidden';
     notComing.style.visibility = 'visible';
     location.reload();
-  })
+  });
+
+
+  noButton.addEventListener('click', () => 
+   {
+    noButton.style.cssText = ' visibility: hidden; transition-duration: 0ms; ';
+    noComingWhy.innerHTML = 'We are sad to hear it! Thanks for letting us know!';
+    noComingWhy.style.top = '2rem';
+
+    let sadFace = document.createElement('IMG');
+    sadFace.setAttribute('src', '../images/check.png');
+    sadFace.setAttribute('class', 'sad-face');
+
+    notComingDiv.appendChild(sadFace);
+
+    if ((document.body.outerHTML.indexOf('hospedaje') > -1) || (document.body.outerHTML.indexOf('NOVIO') > -1))
+    {
+      noComingWhy.innerHTML = 'Estamos triste de escucharlo, gracias por el aviso!'
+    }
+
+  });
 
 });

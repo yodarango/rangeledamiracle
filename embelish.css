@@ -1188,7 +1188,6 @@ line-height: 1.5rem;
 {
    .menu a 
    {
-     
         font-size: 1.8em;
     }
     .ceremony-wrapper a, .reception-wrapper a
@@ -1200,11 +1199,11 @@ line-height: 1.5rem;
     height: 120px;
     font-size: 1.2em;
     }
-    header
+header
 {
-
 height: 120px;
 }
+
 header h2
 {
 font-size: 4.8rem;
@@ -1321,7 +1320,39 @@ height: 7.2rem;
 {
     height: 2.5rem;
 }
+/****NOT COMING BUTTON STARTS******/
+.not-coming3
+{
+    width: 35rem;
+    height: 43rem;
+    right: calc((100vw - 35rem) * 0.5);
+    top: calc((100vh - 43rem) * 0.5);
 }
+.no-coming-why
+{
+    font-size: 2.5em;
+    margin: 1rem auto 0;
+}
+.no-coming-text
+{
+    text-align: center;
+    font-size: 1.8em;
+    position: relative;
+    top: 0;
+}
+.no-button
+{
+    width: 25rem;
+    height: 8rem;
+    border-radius: 4rem;
+    top: 16rem;
+}
+.sad-face 
+{
+top: -2rem;
+}
+}
+
 @media only screen and (min-width: 800px)
 {
     .rsvp-wrap
@@ -1607,6 +1638,35 @@ width: 500px;
 {
     top: -28rem;
 }
+/****NOT COMING LINK*******/
+.not-coming3
+{
+    width: 45rem;
+    height: 50rem;
+    right: calc((100vw - 45rem) * 0.5);
+    top: calc((100vh - 50rem) * 0.5);
+}
+.no-coming-why
+{
+    font-size: 3em;
+    top: 2rem;
+}
+.no-coming-text
+{
+    font-size: 2.5em;
+}
+.no-button
+{
+    width: 25rem;
+    height: 10rem;
+    border-radius: 7.5rem;
+    top: 20rem;
+}
+.sad-face
+{
+top: -2rem;
+}
+
 }
 @media only screen and (min-width: 1200px)
 {
