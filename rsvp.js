@@ -29,7 +29,7 @@ submit.addEventListener("click", () =>
     document.querySelector("#form-instructions").innerHTML = `${rsvpCode.value} ${totalGuests.value} guests have been added to your table, we are excited to have you with us`
     document.querySelector("FORM H2").innerHTML = "THANK YOU";
     let doneImg = document.createElement("IMG");
-    doneImg.setAttribute("src", "../images/check.png");
+    doneImg.setAttribute("src", "../images/check.jpg");
     doneImg.className = "sucess-image";
     form.appendChild(doneImg);
 } 

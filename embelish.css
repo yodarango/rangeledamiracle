@@ -161,27 +161,13 @@ z-index: 10;
   }
       .slideshow li:nth-child(6) span { 
         background-image: url("../images/6.JPG"); 
+        animation-delay: 30s; 
     }
     .slideshow li:nth-child(7) span { 
         background-image: url("../images/7.JPG");
-        animation-delay: 30s; 
-    }
-    .slideshow li:nth-child(8) span { 
-        background-image: url("../images/8.JPG");
         animation-delay: 36s; 
     }
-    .slideshow li:nth-child(9) span { 
-        background-image: url("../images/9.JPG");   
-        animation-delay: 42s; 
-    }
-    .slideshow li:nth-child(10) span { 
-        background-image: url("../images/10.JPG");
-        animation-delay: 48s; 
-  }
-  .slideshow li:nth-child(10) span { 
-    background-image: url("../images/11.JPG");
-    animation-delay: 54s; 
-}
+
   @keyframes imageAnimation { 
       0% { opacity: 0; animation-timing-function: ease-in;}
       8% { opacity: 1; animation-timing-function: ease-out;}
@@ -563,12 +549,14 @@ animation: grow 3s ease-in;
 }
 .rsvp:hover, .rsvp2:hover
 {
+
     background-color: pink;
     color: white;
     transform: scale(.9);
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
     cursor: pointer;
+
 }
 [class*= "bar"]:hover
 {
@@ -1304,7 +1292,7 @@ height: 7.2rem;
       width: 70%; 
       left: 15%; 
       position: relative; 
-      top: -18rem;
+      top: -22rem;
   }
   @keyframes grow 
   {
@@ -1688,7 +1676,11 @@ left: 27.5%;
 }
 .sucess-image
 {
-    top: -19rem;
+    top: -24rem;
+}
+.sad-face
+{
+top: -6rem;
 }
 }
 
