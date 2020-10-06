@@ -22,6 +22,7 @@ body
 {
     background-color: #f2f2f2;
     color: var(--dark-gray);
+    z-index: -1;
 }
 body::-webkit-scrollbar
 {
@@ -30,7 +31,17 @@ body::-webkit-scrollbar
 .wrapper
 {
 height: 100vh;
+/**chages 2.0**/
+position: fixed;
+z-index: -100;
 }
+.home
+{
+   color: var(--sage-green);
+   position: absolute;
+   font-size: .2rem;
+}
+
 header
 {
 width: 100%;
@@ -119,52 +130,50 @@ z-index: 10;
       width: 100vw;
       height: 100%;
       left: 0px;
-      z-index: 0;
   }
-  .slideshow li span { 
-        position: absolute;
-      width: 100%;
-      height: 100%;
+  .slideshow li img { 
+     position: absolute;
+      width: 100vw;
+      height: 100vh;
       top: 0px;
       left: 0px;
-      color: transparent;
-      background-size: cover;
+      object-fit: cover;
+      /*background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-repeat: no-repeat;*/
       opacity: 0;
       z-index: 0;
       animation-name: imageAnimation;
-      animation-duration: 60s; 
+      animation-duration: 36s; 
      animation-iteration-count: infinite;
      animation-timing-function: linear;
      animation-delay: 0; 
   }
   .slideshow li:nth-child(1) span { 
-      background-image: url("../images/1.JPG"); 
+     /** background-image: url("../images/one.jpg"); */
   }
-  .slideshow li:nth-child(2) span { 
-      background-image: url("../images/2.JPG");
+  .slideshow li:nth-child(2) img { 
+      /*background-image: url("../images/two.jpg");***/
       animation-delay: 6s; 
   }
-  .slideshow li:nth-child(3) span { 
-      background-image: url("../images/3.JPG");
+  .slideshow li:nth-child(3) img { 
+      /*background-image: url("../images/three.jpg");*/
       animation-delay: 12s; 
   }
-  .slideshow li:nth-child(4) span { 
-      background-image: url("../images/4.JPG");   
+  .slideshow li:nth-child(4) img { 
+      /*background-image: url("../images/four.jpg"); */  
       animation-delay: 18s; 
   }
-  .slideshow li:nth-child(5) span { 
-      background-image: url("../images/5.JPG");
+  .slideshow li:nth-child(5) img { 
+      /*background-image: url("../images/five.jpg");*/
       animation-delay: 24s; 
   }
-      .slideshow li:nth-child(6) span { 
-        background-image: url("../images/6.JPG"); 
+      .slideshow li:nth-child(6) img { 
+       /* background-image: url("../images/six.jpg"); */
         animation-delay: 30s; 
     }
-    .slideshow li:nth-child(7) span { 
-        background-image: url("../images/7.JPG");
+    .slideshow li:nth-child(7) img { 
+        /*background-image: url("../images/seven.jpg");*/
         animation-delay: 36s; 
     }
 
@@ -175,6 +184,15 @@ z-index: 10;
       25% { opacity: 0 }
       100% { opacity: 0 }
   }
+/*****2.0****/
+#top-of-slideshow
+{
+   position: relative;
+    z-index: 1;
+    top: 100vh;
+    background-color: #f2f2f2;
+}
+/******/
 h1
 {
 color: var(--sage-green);
@@ -378,15 +396,15 @@ border-bottom-left-radius: 80% 81%;
 .links-table > div:hover:after
 {
     transform:  scale(0.2) translate( -340%, 330%);
-    transition-timing-function: ease-out;
-    transition-duration: 500ms;
+   /* transition-timing-function: ease-out;
+    transition-duration: 500ms;*/
 }
 .links-table > div:hover
 {
     border-bottom-left-radius: 0;
     background-color: rgb(255, 255, 199);
-    transition-timing-function: ease-out;
-    transition-duration: 500ms;
+  /*  transition-timing-function: ease-out;
+    transition-duration: 500ms;*/
     
 }
 .last-child a 
@@ -395,7 +413,7 @@ border-bottom-left-radius: 80% 81%;
     z-index: 20;
     color: var(--dark-gray);
     font-family: var(--main-font);
-    font-size: calc(var(--image-size) * .03);
+    font-size: calc(var(--image-size) * .04);
     width: 100%;
     display: block;
     text-align: center;
@@ -486,15 +504,15 @@ justify-content: center;
     right: calc((100vw - 20rem) * 0.5);
     background: white;
     position: fixed;
-    z-index: 50;
+    z-index: 61;
     top: calc((100vh - 25rem) * 0.5);
-    transition-duration: 500;
+    transition-duration: 500ms;
     font-family: var(--main-font);
 }
 .no-coming-why
 {
     font-family: var(--main-font);
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: var(--dark-gray);
     position: relative;
     top: 4rem;
@@ -574,13 +592,13 @@ transform: translateX(2em);
 }
 .checked:checked + .bar, .checked2:checked + .bar2 
 {
-    background: url(../images/MexicanFlag.png);
+    background: url(../images/MexicanFlag.jpg);
     background-size: cover;
     transition: 700ms;
 }
 .bar, .bar2
 {
-background: url(../images/usaflag.png);
+background: url(../images/usaflag.jpg);
 background-size: cover;
 color: white;
 width: 4em;
@@ -640,23 +658,23 @@ justify-content: center;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     visibility: hidden;
-    z-index: 50;
+    z-index: 60;
     top: 0;
     left: 0;
     position: fixed;
   }
   .rsvp-wrap
    {
-    width: 80%;
+    width: 23.5rem;
     height: 38rem;
     background-color: white;
     position: fixed;
-    left: 10%;
-    top: 15%;
+    left:  calc((100vw - 23.5rem) / 2);
+    top: calc((100vh - 38rem) / 2);
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     visibility: hidden;
-    z-index: 51;
+    z-index: 61;
   }
   .rsvp-wrap h2
   {
@@ -667,7 +685,7 @@ justify-content: center;
     margin-top: 2rem;
   }
   .rsvp-wrap p {
-    font-family: 'Palanquin', sans-serif;
+    font-family: var(--main-font);
     font-size: 1.5em;
     padding: 0;
     text-align: center;
@@ -713,27 +731,31 @@ justify-content: center;
     outline: none;
     background-color: rgba(255, 188, 200, .5);
   }
-  #submit 
+  .submit 
   {
     position: relative;
     width: 8rem;
     height: 4rem;
     margin: 1rem auto;
-    display: block;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     border: 1px solid rgba(73, 116, 83, 1);
     border-top: transparent;
     background-color: rgba(73, 116, 83, 0.1);
-  }
-  #submit:focus
-  {
-    outline: none;
-    background-color: rgba(73, 116, 83, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   #submit:hover
   {
   cursor: pointer;
+  }
+  .submit h5 
+  {
+    text-align: center; 
+    font-size: 1.3em;
+    color: rgba(73, 116, 83, 1);
+    font-family: var(--main-font);
   }
   .sucess-image
   {
@@ -801,16 +823,33 @@ width: calc(var(--image-size) * .5);
 position: relative;
 top: -1rem;
 }
-#storyBrideGroom2, #storyBrideGroom3
+#storyBrideGroom2
 {
     margin: 0 auto;
     top: 0;
-    background: url(/images/4.JPG);
+    background: url(/images/eight.jpg);
     width: 100%;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
-    height: 10rem;
+    /*background-attachment: fixed;**/
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#storyBrideGroom3
+{
+    margin: 0 auto;
+    top: 0;
+    background: url(/images/nine.jpg);
+    width: 100%;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -870,7 +909,7 @@ top: -1rem;
     margin: 0 auto;
     margin-top: 8rem;
     width: 100%;
-    height: 10rem;
+    height: 13rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -879,32 +918,35 @@ top: -1rem;
 }
 #more-info-sections-1
 {
-background: url(../images/whattoexpect.jpg);
+background: url(../images/wte.jpg);
 background-size: cover;
-background-attachment: fixed;
-background-position: bottom;
+background-position: center;
+background-repeat: no-repeat;
+
 }
 #more-info-sections-2
 {
 background: url(../images/lodgging.jpg);
 background-size: cover;
-background-attachment: fixed;
-background-position: bottom;
+background-position: center;
+background-repeat: no-repeat;
+
 }
 #more-info-sections-3
 {
-background: url(../images/registry.jpg);
+background: url(../images/regalo.jpg);
 background-size: cover;
-background-attachment: fixed;
-background-position: bottom;
-margin-top: 0;
+background-position: center;
+background-repeat: no-repeat;
+
 }
 #more-info-sections-4
 {
 background: url(../images/whattodo.jpg);
 background-size: cover;
-background-attachment: fixed;
-background-position: bottom;
+background-position: center;
+background-repeat: no-repeat;
+
 }
 .pollaroid
 {
@@ -1138,16 +1180,16 @@ line-height: 1.5rem;
 {
     text-decoration: underline;
 }
-/***Not Coming ***/
+a
+{
+    color: var(--dark-gray);
+}
+
+
 
 @media only screen and (min-width: 600px)
 {
-    .rsvp-wrap
-    {
-        width: 70%;
-        left: 15%;
-    }
-    .sucess-image
+   /* .sucess-image
   {
       width: 70%; 
       left: 15%; 
@@ -1155,7 +1197,7 @@ line-height: 1.5rem;
       top: -16.5rem;
       transition-duration: 500ms;
       animation: grow 3s ease-in;
-  }
+  }*/
   @keyframes grow 
   {
       0%{width: 50%; left: 25%;}
@@ -1174,7 +1216,27 @@ line-height: 1.5rem;
 
 @media only screen and (min-width: 750px)
 {
-   .menu a 
+    .home
+    {
+        font-family: 'Palanquin', sans-serif;
+        font-size: 1.2em;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        color: white;
+        padding: .1em .8em;
+        border-radius: 1em;
+        border: 1px solid white;
+        z-index: 60;
+
+    }
+    .home:hover
+    {
+    background: white;
+    color: var(--sage-green);
+    }
+
+    .menu a 
    {
         font-size: 1.8em;
     }
@@ -1270,13 +1332,13 @@ height: 7.2rem;
 /**RSVP FORM STARTS***/
 .rsvp-wrap
    {
-    width: 60%;
-    left: 20%;
-    top: 7%;
-    height: 46rem;
+    width: 35rem;
+    left: calc((100vw - 35rem) / 2);
+    top: calc((100vh - 43rem) / 1.5);
+    height: 43rem;
   }
 
-  .rsvp-code, #guestnumber, #submit 
+  .rsvp-code, #guestnumber, .submit 
   {
     position: relative;
     width: 10rem;
@@ -1343,17 +1405,25 @@ top: -2rem;
 
 @media only screen and (min-width: 800px)
 {
-    .rsvp-wrap
-   {
-    width: 60%;
-    left: 20%;
-    top: 5%;
-    height: 50rem;
-  }
+
   #form-message
   {
       height: 5rem;
   }
+  .links-table > div:hover:after
+{
+    transform:  scale(0.2) translate( -340%, 330%);
+   transition-timing-function: ease-out;
+    transition-duration: 500ms;
+}
+.links-table > div:hover
+{
+    border-bottom-left-radius: 0;
+    background-color: rgb(255, 255, 199);
+  transition-timing-function: ease-out;
+    transition-duration: 500ms;
+    
+}
 }
 @media only screen and (min-width: 999px)
 {
@@ -1440,7 +1510,11 @@ font-size: 70px;
 {
 text-decoration: underline;
 }
-
+/*.rsvp-wrap
+{
+    height: 46rem;
+    width: 38rem;
+}*/
 .rsvp, .rsvp2
 {
 font-size: 45px;
@@ -1513,28 +1587,84 @@ font-size: 1.5em;
   {
       height: 25rem;
   }
-
-  .sucess-image
+  #storyBrideGroom2
+  {
+      margin: 0 auto;
+      top: 0;
+      background: url(/images/eight.jpg);
+      width: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+  }
+  #storyBrideGroom3
+  {
+      margin: 0 auto;
+      top: 0;
+      background: url(/images/nine.jpg);
+      width: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+  }
+ /* .sucess-image
   {
       width: 50%; 
       left: 25%; 
       position: relative; 
       top: -20rem;
-  }
+  }*/
   /****MORE INFO PAGE****/
 
   .more-info-sections
 {
   height: 17rem;  
 }
-  /****RSVP BUTTON****/
-.sucess-image
+#more-info-sections-1
 {
-    width: 70%; 
-    left: 15%; 
-    position: relative; 
-    top: -20rem;
+background: url(../images/whattoexpect.jpg);
+background-size: cover;
+background-position: bottom;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
+#more-info-sections-2
+{
+background: url(../images/lodgging.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+#more-info-sections-3
+{
+background: url(../images/registry.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+#more-info-sections-4
+{
+background: url(../images/whattodo.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+  /****RSVP BUTTON****/
   .rsvp3
 {
     margin-top: 17rem;
@@ -1668,15 +1798,6 @@ left: 27.5%;
     width: 100%;
     height: 25rem;
     position: relative;
-}
-.rsvp-wrap
-{
-    width: 40%;
-    left: 30%;
-}
-.sucess-image
-{
-    top: -24rem;
 }
 .sad-face
 {

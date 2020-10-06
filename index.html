@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-
+<!--V 2.03 09/27/2020-->
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="contians wedding information abotut groom and bride">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <link rel="stylesheet" type="text/css" href="embelish.css">
   <link rel="stylesheet" href="https://use.typekit.net/vvl2jlc.css">
   <link rel="stylesheet" href="https://use.typekit.net/vvl2jlc.css">
@@ -29,15 +29,23 @@
     <p id="countdown"></p>
 
     <ul class="slideshow">
+      <!--<li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
       <li><span></span></li>
-      <li><span></span></li>
+      <li><img src="../images/one.jpg" alt="engagement picutres"></li>-->
+      <li><img src="../images/two.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/three.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/four.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/five.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/six.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/seven.jpg" alt="engagement picutres"></li>
     </ul>
   </section>
+  <section id="top-of-slideshow"> <!--this section is 2.0-->
   <input onclick="language()" class="checked" id="checkbox" type="checkbox">
     <label class="bar" for="checkbox">
       <div class="ball"></div>
@@ -50,7 +58,7 @@
     <li><a id="groom" href="thebride.html#storyBrideGroom3">THE GROOM</a></li>
   </ul>
   <section class="ceremony-wrapper">
-    <img src="/images/circleTop.JPG">
+    <img src="/images/circleTop.jpg" alt="engagement picture">
     <div>
       <h2 id="ceremony">CEREMONY</h2>
       <p id="date"><span class="date">June 19th, 2021 6:30PM</span><br>
@@ -63,7 +71,7 @@
   </section>
 
   <section class="reception-wrapper">
-    <img src="/images/circleBottom.JPG">
+    <img src="/images/circleBottom.jpg" alt="engagement picture">
     <div>
       <h2 id="reception">RECEPTION</h2>
       <p id="address2"><span class="date">June 19th, 2021 Following Ceremony</span><br>
@@ -73,11 +81,11 @@
       <hr>
     </div>
   </section>
-  <img src="images/Flowers.png" id="flowers">
+  <img src="images/Flowers.png" id="flowers" alt="engagement picture">
   <section class="additional-details">
     <h2 id="add-det">ADDITIONAL DETAILS</h2>
     <div class="links-table">
-      <div class="sticky" id="sticky1">
+     <div class="sticky" id="sticky1">
         <div></div>
         <div></div>
         <div></div>
@@ -103,7 +111,7 @@
       </div>
     </div>
     <div class="rsvp" >RSVP</div>
-    <div class="not-coming">Not coming?</div>
+    <!--<div class="not-coming">Not coming?</div>-->
 
   </section>
 
@@ -112,18 +120,19 @@
     <h2>WELCOME</h2>
     <p id = "form-instructions">Please enter the code printed in your invitation along with the number of guests to RSVP</p>
     <input id="guestnumber" type="number" placeholder="0">
-    <input class="rsvp-code" action="submit" type="text" maxlength="5" placeholder="enter your code"></input>
-  <input id="submit" type="button" value="submit">
+    <input class="rsvp-code" type="text" maxlength="5" placeholder="enter your code"></input>
+    <div class="submit" ><h5>SUBMIT</h5></div>
   <p id="form-message"></p>
   </form>
 
   <div class= "body"></div>
 
   <footer>
-    <p class = "footer" >2020 YodarangoCreations &copy; | All rights reservred</p>
+    <p class = "footer" >2020 Xharcoal&copy; by D. Rangel | All rights reservred</p>
   </footer>
   <script src="functionality.js"></script>
   <script src="lang.js"></script>
   <script src="rsvp.js"></script>
+</section>
 </body>
 </html>

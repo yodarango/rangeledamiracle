@@ -19,6 +19,7 @@ let language = function()
     let n = document.querySelector("#page4");
     let o = document.querySelector(".rsvp-wrap H2");
     let p = document.querySelector("#form-instructions");
+    let q = document.querySelector(".not-coming");
 
     localStorage.setItem('chek', firstCheckedBox.checked);
 
@@ -43,6 +44,7 @@ let language = function()
       n.innerHTML = "Obsequios";
       o.innerHTML = "BIENVENIDO";
       p.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
+      q.innerHTML = "No Asistiras?"
 
     } else {
       a.innerHTML = "THE BRIDE";
@@ -63,6 +65,7 @@ let language = function()
       n.innerHTML = "Registry";
       o.innerHTML = "WELCOME";
       p.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
+      q.innerHTML = "Not Coming?"
 
     }
   }
@@ -82,7 +85,7 @@ let language = function()
     let zzz = document.querySelector(".funfactsP2");
     let cba = document.querySelector(".rsvp-wrap H2");
     let fed = document.querySelector("#form-instructions");
-    let hig = document.querySelector(".no-coming-why");
+    let hig = document.querySelector(".not-coming");
 
 
     localStorage.setItem('chek2', secondCheckedBox.checked);
@@ -126,7 +129,9 @@ let language = function()
       'Comida Favorita: Lasagna <br></p>';
       cba.innerHTML = "BIENVENIDO";
       fed.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
- 
+      hig.innerHTML = "No Asistiras?"
+
+
   } else 
 
   {
@@ -165,6 +170,7 @@ let language = function()
     'Favorite Food: Lasagna <br></p>';
     cba.innerHTML = "WELCOME";
     fed.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
+    hig.innerHTML = "Not Coming?"
 
   }
 }
@@ -193,6 +199,7 @@ let language3 = function()
   let tbb = document.querySelector("#storyBrideGroomP-Moreinfo4");
   let ubb = document.querySelector(".rsvp-wrap H2");
   let vbb = document.querySelector("#form-instructions");
+  let wbb = document.querySelector(".not-coming");
 
   localStorage.setItem('chek2', secondCheckedBox.checked);
 
@@ -229,6 +236,7 @@ let language3 = function()
     "puedes visitar durante tu estancia en Hot Springs. Estas opciones abarcan desde divercion familiar hasta los lugares mas populares para satisfacer tu hambre.";
     ubb.innerHTML = "BIENVENIDO";
     vbb.innerHTML = "Porfavor entra el codigo impreso en tu invitacion con el numero total de personas que vienen contigo.";
+    wbb.innerHTML = "No Asistiras?"
 
   }
   else 
@@ -262,6 +270,7 @@ let language3 = function()
     "to some of the most popular places to eat."
     ubb.innerHTML = "WELCOME";
     vbb.innerHTML = "Please enter the code printed in your invitation along with the number of guests to RSVP";
+    wbb.innerHTML = "Not Coming?"
 
   }
 }
