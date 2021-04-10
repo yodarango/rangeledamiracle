@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<!--V 2.03 09/27/2020-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="contians wedding information abotut groom and bride">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="embelish.css">
+  <link rel="stylesheet" href="https://use.typekit.net/vvl2jlc.css">
+  <link rel="stylesheet" href="https://use.typekit.net/vvl2jlc.css">
+  <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100&display=swap" rel="stylesheet">
+  <title>RangeledaMiracle | Home</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body onload="load()">
+  <header>
+    <h2>RangeledaMiracle</h2>
+  </header>
+  <div class="rsvp10" onclick="popup()" >RSVP</div>
+  <section class="wrapper">
+    <!-- <svg class="circle"> 
+        <circle id="circle" cx="50%" cy="50%" r="120"></circle>
+        <circle id="circle2" cx="50%" cy="50%" r="150"></circle>
+        <circle id="circle3" cx="50%" cy="50%" r="200"></circle>
+    </svg> -->
+    <p id="countdown"></p>
+
+    <ul class="slideshow">
+      <!--<li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><img src="../images/one.jpg" alt="engagement picutres"></li>-->
+      <li><img src="../images/two.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/three.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/four.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/five.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/six.jpg" alt="engagement picutres"></li>
+      <li><img src="../images/seven.jpg" alt="engagement picutres"></li>
+    </ul>
+  </section>
+  <section id="top-of-slideshow"> <!--this section is 2.0-->
+  <input onclick="language()" class="checked" id="checkbox" type="checkbox">
+    <label class="bar" for="checkbox">
+      <div class="ball"></div>
+    </label>
+  <h1>ALAYNA & DANIEL</h1>
+  <hr id="hr">
+  <ul class="menu">
+    <li><a id="bride" href="thebride.html#storyBrideGroom2">THE BRIDE</a></li>
+    <li><a id="story" href="thebride.html#storyBrideGroom">OUR STORY</a></li>
+    <li><a id="groom" href="thebride.html#storyBrideGroom3">THE GROOM</a></li>
+  </ul>
+  <section class="ceremony-wrapper">
+    <img src="/images/circleTop.jpg" alt="engagement picture">
+    <div>
+      <h2 id="ceremony">CEREMONY</h2>
+      <p id="date"><span class="date">June 19th, 2021 6:30PM</span><br>
+        550 Arkridge Rd  <br>
+        Hot Springs, AR 71913</p> <br>
+      <a id="get-directions" class="get-directions" href="https://goo.gl/maps/wqXsZM38fhuBYKoB7">
+       Get Directions</a>
+      <hr>
+    </div>
+  </section>
+
+  <section class="reception-wrapper">
+    <img src="/images/circleBottom.jpg" alt="engagement picture">
+    <div>
+      <h2 id="reception">RECEPTION</h2>
+      <p id="address2"><span class="date">June 19th, 2021 Following Ceremony</span><br>
+        550 Arkridge Rd <br>
+        Hot Springs, AR 71913</p> <br>
+      <a href="https://goo.gl/maps/wqXsZM38fhuBYKoB7" id="get-directions" class="get-directions get-directions2">Get Directions</a>
+      <hr>
+    </div>
+  </section>
+  <img src="images/Flowers.png" id="flowers" alt="engagement picture">
+  <section class="additional-details">
+    <h2 id="add-det">ADDITIONAL DETAILS</h2>
+    <div class="links-table">
+     <div class="sticky" id="sticky1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="last-child"><a id="page1" href="moreinfo.html#more-info-sections-1">What To Expect</a></div>
+      </div>
+      <div class="sticky" id="sticky2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="last-child"><a id="page2" href="moreinfo.html#more-info-sections-2">Lodging</a></div>
+      </div>
+      <div class="sticky" id="sticky3">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="last-child"><a id="page3" href="moreinfo.html#more-info-sections-4">Things To Do <br>In Hot Springs</a></div>
+      </div>
+      <div class="sticky" id="sticky4">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="last-child"><a id="page4" href="moreinfo.html#more-info-sections-3">Registry</a></div>
+      </div>
+    </div>
+    <div class="rsvp" onclick="popup()" >RSVP</div>
+    <!--<div class="not-coming">Not coming?</div>-->
+
+  </section>
+
+  <form class="rsvp-wrap" method="POST" action="/rsvp">
+    <div id="close">X</div>
+    <h2>WELCOME</h2>
+    <p id = "form-instructions">Please type YES or NO to confirm RSVP.</p>
+    <p id="parenthesis">(If not coming leave number on 0)</p>
+    <input id="guestnumber" type="number" placeholder="Number of guests" name="guestNumber">
+    <input class="rsvp-code" type="text" maxlength="100" placeholder="first and lastname" name="guestName"></input>
+    <input class="rsvp-code" type="text" maxlength="3" placeholder="Are you coming?" name="coming"></input>
+    <button class="submit" ><h5>SUBMIT</h5></button>
+  <p id="form-message"></p>
+  </form>
+
+  <div class= "body"></div>
+
+  <footer>
+    <p class = "footer" >2020 Xharcoal&copy; by D. Rangel | All rights reservred</p>
+  </footer>
+  <script src="functionality.js"></script>
+  <script src="lang.js"></script>
+  <script src="rsvp.js"></script>
+</section>
+</body>
+</html>
