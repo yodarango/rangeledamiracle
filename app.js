@@ -10,14 +10,14 @@ const db = new Datastore(`${__dirname}/database.db`)
 db.loadDatabase((err)=> {console.log(err)})
 
 app.post('/rsvp', (req, res)=>{
-    db.insert({ ...req.body }, (error, data)=>{
+    db.insert({ ...req.body, date: Date.now() }, (error, data)=>{
         if (error) { console.log(error) }
     })
     res.redirect('/')
 })
 
 app.get('/rsvp', (req, res)=>{
-    db.find({}, (error, data)=>{
+    db.find({}).sort({ date: -1}).exec((error, data)=>{
         if (error) { console.log(error) }
         res.json(data)
         console.log(data)
