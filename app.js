@@ -10,7 +10,6 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SEND_GRID)
 
 const Datastore = require('nedb');
-const { response } = require('express');
 const db = new Datastore(`${__dirname}/database.db`)
 
 db.loadDatabase((err)=> {console.log(err)})
@@ -23,7 +22,10 @@ app.post('/rsvp', async (req, res)=>{
         to: 'amiracle@sherman.edu', // Change to your recipient
         from: 'alayna_miracle@outlook.com', // Change to your verified sender
         subject: `${name} has RSVP'd for your wedding`,
-        html: `<h1 style="color: green;">Hey Alayna! ${name} has registered for your wedding. They have said about coming: ${response}! with a count of ${number} guests! </h1>`
+        html: `
+        <div style="background: white; padding: 3rem .5rem">
+        <p style="color: green; font: 2rem Arial, sans-serif;">Hey Alayna! ${name} has registered for your wedding. They have said about coming: ${response}! with a count of ${number} guests! </p>
+        </div>`
       }
       sgMail
       .send(msg)
