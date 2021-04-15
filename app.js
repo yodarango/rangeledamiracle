@@ -2,29 +2,32 @@
 require('dotenv').config()
 const express = require('express');
 const app = express()
+const mongoose = require('mongoose')
+const db = require('./db')
 app.use(express.static(`${__dirname}/public`));
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 
+const rsvpSchema = new mongoose.Schema({
+  guestName: String,
+  guestNumber: Number,
+  coming: String
+})
+
+const Rsvp = mongoose.model('Rsvp', rsvpSchema);
+
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SEND_GRID)
 
-const Datastore = require('nedb');
-const db = new Datastore(`${__dirname}/database.db`)
-
-db.loadDatabase((err)=> {console.log(err)})
-
 app.post('/rsvp', async (req, res)=>{
-    const name = req.body.guestName
-    const number = req.body.guestNumber
-    const response = req.body.coming
+  const saveRsvp = new Rsvp({ ...req.body })
     const msg = {
         to: 'amiracle@sherman.edu', // Change to your recipient
         from: 'alayna_miracle@outlook.com', // Change to your verified sender
-        subject: `${name} has RSVP'd for your wedding`,
+        subject: `${req.body.guestName} has RSVP'd for your wedding`,
         html: `
         <div style="background: white; padding: 3rem .5rem">
-        <p style="color: green; font: 2rem Arial, sans-serif;">Hey Alayna! ${name} has registered for your wedding. They have said about coming: ${response}! with a count of ${number} guests! </p>
+        <p style="color: green; font: 2rem Arial, sans-serif;">Hey Alayna! ${req.body.guestName} has registered for your wedding. They have said about coming: ${req.body.coming}! with a count of ${req.body.guestNumber} guests! </p>
         </div>`
       }
       sgMail
@@ -35,18 +38,19 @@ app.post('/rsvp', async (req, res)=>{
       .catch((error) => {
         console.error(error)
       })
-    db.insert({ ...req.body, date: Date.now() }, (error, data)=>{
-        if (error) { console.log(error) }    
-    })
-    res.redirect('/')
+
+      try {
+        await saveRsvp.save()
+        res.redirect('/')
+        
+      } catch (error) {
+        console.log(error)
+      }
 })
 
-app.get('/rsvp', (req, res)=>{
-    db.find({}).sort({ date: -1}).exec((error, data)=>{
-        if (error) { console.log(error) }
-        res.json(data)
-        console.log(data)
-    })
+app.get('/rsvp', async (req, res)=>{
+const data = await Rsvp.find({})
+res.send(data)
 })
 
 app.get('/', (req, res)=>{
@@ -56,15 +60,7 @@ app.get('/', (req, res)=>{
 
 console.log(process.env.SEND_GRID)
 
-app.listen(process.env.PORT || 3000)
-
-//   const sendCancelationEmail = () => {
-//     sgMail.send({
-//         to: 'test@gmail',
-//         from: 'alayna_miracle@outlook.com',
-//         subject: 'Sorry to see you go!',
-//         text: `test.`
-//     })
-// }
-
-// sendCancelationEmail();
+app.listen(process.env.PORT || 1234, (error)=>{
+  if (error) return console.log(error)
+  console.log(`connected on ${5000}`)
+})

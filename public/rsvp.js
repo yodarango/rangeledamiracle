@@ -28,7 +28,8 @@ const pullList = async() =>{
   const yesComing = document.querySelector('.y-top');
   const noComing = document.querySelector('.n-top');
   const number = document.querySelector('.number-of-guest');
-  console.log(data)
+  const total = document.querySelector('#total-guests');
+  let totalCount = 0;
 
   for (item of response)
   {
@@ -57,7 +58,10 @@ const pullList = async() =>{
         no.textContent = 'NO';
         noComing.appendChild(no)
     }
+    totalCount = totalCount + item.guestNumber
   }
+  total.textContent = totalCount
+
 }
 
 pullList()
