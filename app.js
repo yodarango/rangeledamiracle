@@ -41,7 +41,7 @@ app.post('/rsvp', async (req, res)=>{
 
       try {
         await saveRsvp.save()
-        res.redirect('/')
+        res.redirect('/thank-you')
         
       } catch (error) {
         console.log(error)
@@ -56,6 +56,10 @@ res.send(data)
 app.get('/', (req, res)=>{
     res.send('index.html')
 })
+app.get('/thank-you', (req, res)=>{
+  res.sendFile(`${__dirname}/public/thankyou.html`)
+})
+
 
 
 console.log(process.env.SEND_GRID)
